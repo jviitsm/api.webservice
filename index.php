@@ -13,7 +13,7 @@
         
           //Container do EntityManager
           $entityManager = $this -> get('em');
-          
+          try{
             //Instância da entidade Login
               $login = new Login();
               //setando valores do objeto login
@@ -49,7 +49,15 @@
               
               //retornando confirmação do evento completo
               return $response->withJson(["result" => 1],200)->withHeader('Content-type', 'application/json');
-     
+          } catch (Exception $e){
+              //código e mensagem do erro
+              $error = array (
+                  'Code:' => $e->getCode(),
+                  'Message' => $e->getMessage()
+              );
+              //retornando o erro ao cliente
+              return $response->withJson($error)->withHeader('Content-type','applicantion/json');
+          }
   }); 
 
     //Deletar Cidadão e Login por id
