@@ -14,32 +14,32 @@ class Login {
      * @id @Column(type="integer")
      * @GeneratedValue
      */
-    protected $id_login;
+    public $id_login;
     /** 
      * @var string
      * @Column(type="string", unique=true, length=50)
      */
-    protected $email;
+    public $email;
     /**
      *@var string
      * @Column(type="string", unique=true, length=20)
      */
-    protected $login;
+    public $login;
     /**
      *@var string
      * @Column(type="string", nullable=true, length=50)
      */
-    protected $senha;
+    public $senha;
     /**
      *@var boolean
      * @Column(type="boolean")
      */
-    protected $status_login;
+    public $status_login;
     /**
      *@var string
      * @Column(type="boolean")
      */
-    protected $administrador;
+    public $administrador;
     
     function getId_login() {
         return $this->id_login;

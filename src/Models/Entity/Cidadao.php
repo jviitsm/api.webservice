@@ -15,42 +15,42 @@ class Cidadao{
      * @Id @Column(type="integer")
      * @GeneratedValue
      */
-	private $id_cidadao;
+	public $id_cidadao;
      /** 
      * @var string
      * @Column(type="string", length=100)
      */     
-	private $nome;
+	public $nome;
      /** 
      * @var string
      * @Column(type="string", nullable=true, length=100)
      */     
-	private $sobrenome;
+	public $sobrenome;
     /** 
      * @var string
      * @Column(type="string", length=10)
      */     
-	private $sexo;
+	public $sexo;
      /** 
      * @var string
      * @Column(type="string", length=15)
      */
-	private $estado;
+	public $estado;
      /** 
      * @var string
      * @Column(type="string", length=30)
      */     
-	private $cidade;
+	public $cidade;
      /** 
      * @var string
      * @Column(type="string", length=200)
      */     
-	private $dir_foto_usuario;
+	public $dir_foto_usuario;
          /**
         * @OneToOne(targetEntity="login")
         * @JoinColumn(name="fk_login_cidadao", referencedColumnName="id_login")
         */
-	private $fk_login_cidadao;
+	public $fk_login_cidadao;
         
         function getId_cidadao() {
             return $this->id_cidadao;

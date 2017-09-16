@@ -13,22 +13,22 @@ class Comentario{
      * @Id @Column(type="integer")
      * @GeneratedValue
      */
-    private $id_comentario;
+    public $id_comentario;
     /**
      * @OneToOne(targetEntity="login")
      * @JoinColumn(name="fk_login_comentario", referencedColumnName="id_login")
      */
-    private $fk_login_comentario;
+    public $fk_login_comentario;
     /** 
      * @OneToOne(targetEntity="denuncia")
      * @JoinColumn(name="fk_denuncia_comentario", referencedColumnName="id_denuncia")
     */
-    private $fk_denuncia_comentario;
+    public $fk_denuncia_comentario;
     /**
      * @var string
      * @Column(type="string", length=400)
      */
-    private $descricao_comentario;
+    public $descricao_comentario;
         
         function getId_comentario() {
             return $this->id_comentario;

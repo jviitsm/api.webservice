@@ -14,20 +14,20 @@ class Solucao{
      * @Id @Column(type="integer")
      * @GeneratedValue
      */
-    protected $id_solucao;
+    public $id_solucao;
     /** 
      * @var string
      * @Column(type="string")
      */ 
-    protected $descricao_solucao;
+    public $descricao_solucao;
     /** 
      * @var string
      * @Column(type="string")
      */ 
-    protected $dir_foto_solucao;
+    public $dir_foto_solucao;
     /** 
      * @var string
      * @Column(type="datetime")
      */ 
-    protected $data_solucao;
+    public $data_solucao;
 }

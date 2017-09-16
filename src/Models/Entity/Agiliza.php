@@ -13,18 +13,18 @@ class Agiliza{
      * @OneToOne(targetEntity="login")
      * @JoinColumn(name="fk_login_agiliza", referencedColumnName="id_login")
      */
-    private $fk_login_agiliza;
+    public $fk_login_agiliza;
     /** 
      * @Id
      * @OneToOne(targetEntity="denuncia")
      * @JoinColumn(name="fk_denuncia_agiliza", referencedColumnName="id_denuncia")
      *        */
-    private $fk_denuncia_agiliza;
+    public $fk_denuncia_agiliza;
     /** 
      * @var bool
      * @Column(type="boolean")
      */
-    private $interacao;
+    public $interacao;
     
     function getFk_login_agiliza(){
         return $this->fk_login_agiliza;

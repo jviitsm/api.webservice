@@ -14,12 +14,12 @@ class Categoria{
      * @Id @Column(type="integer")
      * @GeneratedValue
      */
-    private $id_categoria;
+    public $id_categoria;
     /** 
      * @var string
      * @Column(type="string", unique=true, length=30)
      */
-    private $descricao_categoria;
+    public $descricao_categoria;
     
     function getId_categoria() {
         return $this->id_categoria;

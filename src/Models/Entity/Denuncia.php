@@ -15,51 +15,51 @@ class Denuncia{
      * @Id @Column(type="integer")
      * @GeneratedValue
      */
-	private $id_denuncia;
+	public $id_denuncia;
     /** 
      * @var string
      * @Column(type="string", length=400)
      */
-	private $descricao_denuncia;
+	public $descricao_denuncia;
     /** 
      * @var string
      * @Column(type="string", length=200)
      */    
-	private $dir_foto_denuncia;
+	public $dir_foto_denuncia;
     /** 
      * @var double
      * @Column(type="float")
      */    
-	private $latitude_denuncia; 
+	public $latitude_denuncia; 
     /** 
      * @var double
      * @Column(type="float")
      */ 
-	private $longitude_denuncia;
+	public $longitude_denuncia;
     /** 
      * @Column(type="datetime")
      */
-	private $data_denuncia;
+	public $data_denuncia;
     /** 
      * @var bool
      * @Column(type="boolean", nullable=true)
      */
-	private $status_denuncia;
+	public $status_denuncia;
         /**
         * @OneToOne(targetEntity="solucao")
         * @JoinColumn(name="fk_solucao_denuncia", referencedColumnName="id_solucao")
         */
-	private $fk_solucao_denuncia;
+	public $fk_solucao_denuncia;
         /**
         * @OneToOne(targetEntity="categoria")
         * @JoinColumn(name="fk_categoria_denuncia", referencedColumnName="id_categoria")
         */
-	private $fk_categoria_denuncia;
+	public $fk_categoria_denuncia;
      /**
         * @OneToOne(targetEntity="login")
         * @JoinColumn(name="fk_login_denuncia", referencedColumnName="id_login")
         */
-	private $fk_login_denuncia;
+	public $fk_login_denuncia;
         
         function getId_denuncia() {
             return $this->id_denuncia;
