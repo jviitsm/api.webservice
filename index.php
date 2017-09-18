@@ -3,17 +3,10 @@
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 
-
-use App\Models\Entity\Login;
-use App\Models\Entity\Cidadao;
-
-
 require 'bootstrap.php';
 
-
-//Rotas
+//Rotas dos clientes
 require '/Routes/Cidadao.php';
-
-
+require '/Routes/Empresa.php';
 
 $app->run();

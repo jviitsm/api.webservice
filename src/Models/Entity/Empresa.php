@@ -108,4 +108,9 @@ class Empresa{
         }
 
 
+          function setCidade($cidade) {
+            $this->cidade = $cidade;
+        }
+
+
 }

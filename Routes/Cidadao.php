@@ -2,6 +2,10 @@
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 
+
+use App\Models\Entity\Login;
+use App\Models\Entity\Cidadao;
+
 $app -> post('/cidadao/cadastrar', function(Request $request, Response $response) use ($app){
 
 				//Container do EntityManager
@@ -12,11 +16,11 @@ $app -> post('/cidadao/cadastrar', function(Request $request, Response $response
 										//recuperando o parâmetro objeto login do json
 		$fk_login_cidadao = $request->getParam('fk_login_cidadao');
 										//setando valores do objeto login
-		$login ->setLogin($fk_login_cidadao['login']);
-		$login ->setEmail($fk_login_cidadao['email']);
-		$login ->setSenha($fk_login_cidadao['senha']);
-		$login ->setStatus_login($fk_login_cidadao['status_login']);
-		$login ->setAsAdministrador($fk_login_cidadao['administrador']);
+		$login ->setLogin($request->getParam('login'));
+		$login ->setEmail($request->getParam('email'));
+		$login ->setSenha($request->getParam('senha'));
+		$login ->setStatus_login($request->getParam('status_login'));
+		$login ->setAsAdministrador($request->getParam('administrador'));
 						//salvando login       
 		$entityManager->persist($login);
 		$entityManager->flush();
