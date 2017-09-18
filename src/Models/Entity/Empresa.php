@@ -14,42 +14,42 @@ class Empresa{
         * @Id @Column(type="integer")
         * @GeneratedValue
         */
-	private $id_empresa;
+	public $id_empresa;
         /** 
         * @var string
         * @Column(type="string", unique=true, length=14)
         */ 
-	private $cnpj;
+	public $cnpj;
         /** 
          * @var string
          * @Column(type="string", unique=true, length=30)
          */ 
-	private $razao_social;
+	public $razao_social;
         /** 
          * @var string
          * @Column(type="string", length=30)
          */     
-	private $nome_fantasia;
+	public $nome_fantasia;
         /** 
          * @var string
          * @Column(type="string", length=15)
          */ 
-	private $estado;
+	public $estado;
         /** 
          * @var string
          * @Column(type="string", length=30)
          */ 
-        private $cidade;
+        public $cidade;
         /** 
          * @var string
          * @Column(type="string", length=200)
          */ 
-	private $dir_foto_usuario;
+	public $dir_foto_usuario;
         /**
         * @OneToOne(targetEntity="Login")
         * @JoinColumn(name="fk_login_empresa", referencedColumnName="id_login")
         */
-	private $fk_login_empresa;
+	public $fk_login_empresa;
         
         function getId_empresa() {
             return $this->id_empresa;
@@ -69,6 +69,9 @@ class Empresa{
 
         function getEstado() {
             return $this->estado;
+        }
+        function getCidade() {
+            return $this->cidade;
         }
 
         function getDir_foto_usuario() {

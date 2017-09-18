@@ -45,7 +45,7 @@ $app -> post('/cidadao/cadastrar', function(Request $request, Response $response
 		$entityManager->flush();
 
 						//retornando confirmação do evento completo
-		$return = $response->withJson(["result" => true],200)->withHeader('Content-type', 'application/json');
+		$return = $response->withJson(["result" => true],201)->withHeader('Content-type', 'application/json');
 	} catch (Exception $e){
 						//código e mensagem do erro
 		$error = array (
@@ -69,9 +69,24 @@ $app->get('/cidadao/exibir/{id}', function(Request $request, Response $response)
 		$entityManager = $this->get('em');
 				//Query em Doctrine para conrtornar o erro de Proxy
 		$query = $entityManager->createQuery("SELECT c, l FROM App\Models\Entity\Cidadao c JOIN c.fk_login_cidadao l WHERE l = l.id_login AND c.id_cidadao = :id")->setParameter(":id", $id);
+		
 		$cidadao = $query -> getResult();
 
-		$return = $response -> withJson($cidadao, 200);
+			if($cidadao)
+		{
+			$return = $response -> withJson($cidadao, 200);
+		}
+		else
+		{
+			$noResult = array(
+				'Code' => "0",
+				'Message' => "No Result"
+			);
+			$return = $response-> withJson($noResult);
+
+			return $return;
+
+		}
 	}catch(Exception $ex){
 		$error = array(
 			'Code' => $ex->getCode(),

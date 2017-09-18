@@ -46,7 +46,7 @@ $app -> post('/empresa/cadastrar', function(Request $request, Response $response
 		$entityManager->flush();
 
 						//retornando confirmação do evento completo
-		$return = $response->withJson(["result" => true],200)->withHeader('Content-type', 'application/json');
+		$return = $response->withJson(["result" => true],201)->withHeader('Content-type', 'application/json');
 	} catch (Exception $e){
 						//código e mensagem do erro
 		$error = array (
@@ -57,5 +57,45 @@ $app -> post('/empresa/cadastrar', function(Request $request, Response $response
 		$return =  $response->withJson($error);
 	}
 
+	return $return;
+});
+
+
+	//retornar Empresa específica
+$app->get('/empresa/exibir/{id}', function(Request $request, Response $response) use ($app){
+	try{
+				//pegando parâmetro do link
+		$route = $request -> getAttribute('route');
+		$id = $route -> getArgument('id');
+
+		$entityManager = $this->get('em');
+				//Query em Doctrine para conrtornar o erro de Proxy
+		$query = $entityManager->createQuery("SELECT c, l FROM App\Models\Entity\Empresa c JOIN c.fk_login_empresa l WHERE l = l.id_login AND c.id_empresa = :id")->setParameter(":id", $id);
+		$empresa = $query -> getResult();
+
+		if($empresa)
+		{
+			$return = $response -> withJson($empresa, 200);
+
+		}
+		else
+		{
+			$noResult = array(
+				'Code' => "0",
+				'Message' => "No Result"
+			);
+			$return = $response-> withJson($noResult);
+
+			return $return;
+
+		}
+
+	}catch(Exception $ex){
+		$error = array(
+			'Code' => $ex->getCode(),
+			'Message'=> $ex->getMessage()
+		);
+		$return = $response-> withJson($error);
+	} 
 	return $return;
 });
