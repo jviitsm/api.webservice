@@ -10,21 +10,21 @@ namespace App\Models\Entity;
 class Agiliza{
     /** 
      * @Id
-     * @OneToOne(targetEntity="login")
+     * @OneToOne(targetEntity="Login")
      * @JoinColumn(name="fk_login_agiliza", referencedColumnName="id_login")
      */
-    public $fk_login_agiliza;
+    private $fk_login_agiliza;
     /** 
      * @Id
-     * @OneToOne(targetEntity="denuncia")
+     * @OneToOne(targetEntity="Denuncia")
      * @JoinColumn(name="fk_denuncia_agiliza", referencedColumnName="id_denuncia")
      *        */
-    public $fk_denuncia_agiliza;
+    private $fk_denuncia_agiliza;
     /** 
      * @var bool
      * @Column(type="boolean")
      */
-    public $interacao;
+    private $interacao;
     
     function getFk_login_agiliza(){
         return $this->fk_login_agiliza;

@@ -21,7 +21,7 @@ class Login {
      */
     public $email;
     /**
-     *@var string
+     * @var string
      * @Column(type="string", unique=true, length=20)
      */
     public $login;
@@ -88,8 +88,6 @@ class Login {
     function setAsAdministrador($administrador) {
         $this->administrador = $administrador;
     }
-
-
 }
 
 

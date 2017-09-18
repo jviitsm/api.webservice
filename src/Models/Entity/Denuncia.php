@@ -15,51 +15,51 @@ class Denuncia{
      * @Id @Column(type="integer")
      * @GeneratedValue
      */
-	public $id_denuncia;
+	private $id_denuncia;
     /** 
      * @var string
      * @Column(type="string", length=400)
      */
-	public $descricao_denuncia;
+	private $descricao_denuncia;
     /** 
      * @var string
      * @Column(type="string", length=200)
      */    
-	public $dir_foto_denuncia;
+	private $dir_foto_denuncia;
     /** 
      * @var double
      * @Column(type="float")
      */    
-	public $latitude_denuncia; 
+	private $latitude_denuncia; 
     /** 
      * @var double
      * @Column(type="float")
      */ 
-	public $longitude_denuncia;
+	private $longitude_denuncia;
     /** 
      * @Column(type="datetime")
      */
-	public $data_denuncia;
+	private $data_denuncia;
     /** 
      * @var bool
      * @Column(type="boolean", nullable=true)
      */
-	public $status_denuncia;
+	private $status_denuncia;
         /**
-        * @OneToOne(targetEntity="solucao")
+        * @OneToOne(targetEntity="Solucao")
         * @JoinColumn(name="fk_solucao_denuncia", referencedColumnName="id_solucao")
         */
-	public $fk_solucao_denuncia;
+	private $fk_solucao_denuncia;
         /**
-        * @OneToOne(targetEntity="categoria")
+        * @OneToOne(targetEntity="Categoria")
         * @JoinColumn(name="fk_categoria_denuncia", referencedColumnName="id_categoria")
         */
-	public $fk_categoria_denuncia;
-     /**
-        * @OneToOne(targetEntity="login")
+	private $fk_categoria_denuncia;
+        /**
+        * @OneToOne(targetEntity="Login")
         * @JoinColumn(name="fk_login_denuncia", referencedColumnName="id_login")
         */
-	public $fk_login_denuncia;
+	private $fk_login_denuncia;
         
         function getId_denuncia() {
             return $this->id_denuncia;

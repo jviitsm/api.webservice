@@ -46,11 +46,11 @@ class Cidadao{
      * @Column(type="string", length=200)
      */     
 	public $dir_foto_usuario;
-         /**
-        * @OneToOne(targetEntity="login")
-        * @JoinColumn(name="fk_login_cidadao", referencedColumnName="id_login")
-        */
-	public $fk_login_cidadao;
+    /**
+    * @OneToOne(targetEntity="Login")
+    * @JoinColumn(name="fk_login_cidadao", referencedColumnName="id_login")
+	*/
+    public $fk_login_cidadao;
         
         function getId_cidadao() {
             return $this->id_cidadao;

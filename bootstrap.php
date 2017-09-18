@@ -8,9 +8,9 @@ use Doctrine\ORM\EntityManager;
 //Configurações
 $configs = [
 	'settings' => [
-                'determineRouteBeforeAppMiddleware' => true,
 		'displayErroDetails' => true,
-                'addContentLengthHeader' => false,
+        'determineRouteBeforeAppMiddleware' => true,
+		'addContentLengthHeader' => false,
 	],
 ];
 
@@ -39,7 +39,7 @@ $conn = array(
 	'driver' => 'pdo_mysql',
 	'host' => '127.0.0.1',
 	'user' => 'root',/*citycare_web*/
-	'password' => '',/*T0*oO3HfwSzv*/
+	'password' => 'root',/*T0*oO3HfwSzv*/
 	'dbname' => 'citycare_db'
 );
 
@@ -48,9 +48,6 @@ $conn = array(
 $entityManager = EntityManager::create($conn,$config);
 
 $container['em'] = $entityManager;
-
-
-
 
 $app = new \Slim\App($container);
  ?>
