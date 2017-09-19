@@ -16,11 +16,11 @@ $app -> post('/cidadao/cadastrar', function(Request $request, Response $response
 										//recuperando o parâmetro objeto login do json
 		$fk_login_cidadao = $request->getParam('fk_login_cidadao');
 										//setando valores do objeto login
-		$login ->setLogin($request->getParam('login'));
-		$login ->setEmail($request->getParam('email'));
-		$login ->setSenha($request->getParam('senha'));
-		$login ->setStatus_login($request->getParam('status_login'));
-		$login ->setAsAdministrador($request->getParam('administrador'));
+		$login ->setLogin($fk_login_cidadao['login']);
+		$login ->setEmail($fk_login_cidadao['email']);
+		$login ->setSenha($fk_login_cidadao['senha']);
+		$login ->setStatus_login($fk_login_cidadao['status_login']);
+		$login ->setAsAdministrador($fk_login_cidadao['administrador']);
 						//salvando login       
 		$entityManager->persist($login);
 		$entityManager->flush();
@@ -70,6 +70,7 @@ $app->get('/cidadao/exibir/{id}', function(Request $request, Response $response)
 				//Query em Doctrine para conrtornar o erro de Proxy
 		$query = $entityManager->createQuery("SELECT c, l FROM App\Models\Entity\Cidadao c JOIN c.fk_login_cidadao l WHERE l = l.id_login AND c.id_cidadao = :id")->setParameter(":id", $id);
 		
+		
 		$cidadao = $query -> getResult();
 
 			if($cidadao)
@@ -97,7 +98,3 @@ $app->get('/cidadao/exibir/{id}', function(Request $request, Response $response)
 	return $return;
 });
 
-$app->delete('/cidadao/desativar', function(Request $request, Response $response) use ($app){
-
-
-});

@@ -17,11 +17,11 @@ $app -> post('/empresa/cadastrar', function(Request $request, Response $response
 										//recuperando o parâmetro objeto login do json
 		$fk_login_empresa = $request->getParam('fk_login_empresa');
 										//setando valores do objeto login
-		$login ->setLogin($request->getParam('login'));
-		$login ->setEmail($request->getParam('email'));
-		$login ->setSenha($request->getParam('senha'));
-		$login ->setStatus_login($request->getParam('status_login'));
-		$login ->setAsAdministrador($request->getParam('administrador'));
+		$login ->setLogin($fk_login_cidadao['login']);
+		$login ->setEmail($fk_login_cidadao['email']);
+		$login ->setSenha($fk_login_cidadao['senha']);
+		$login ->setStatus_login($fk_login_cidadao['status_login']);
+		$login ->setAsAdministrador($fk_login_cidadao['administrador']);
 						//salvando login       
 		$entityManager->persist($login);
 		$entityManager->flush();
@@ -71,7 +71,10 @@ $app->get('/empresa/exibir/{id}', function(Request $request, Response $response)
 		$entityManager = $this->get('em');
 				//Query em Doctrine para conrtornar o erro de Proxy
 		$query = $entityManager->createQuery("SELECT c, l FROM App\Models\Entity\Empresa c JOIN c.fk_login_empresa l WHERE l = l.id_login AND c.id_empresa = :id")->setParameter(":id", $id);
+		
+		
 		$empresa = $query -> getResult();
+
 
 		if($empresa)
 		{
@@ -89,6 +92,10 @@ $app->get('/empresa/exibir/{id}', function(Request $request, Response $response)
 			return $return;
 
 		}
+
+
+
+
 
 	}catch(Exception $ex){
 		$error = array(
