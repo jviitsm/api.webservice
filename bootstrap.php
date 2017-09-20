@@ -21,14 +21,13 @@ $configs = [
 $container = new \Slim\Container($configs);
 
 
-$container['erroHandler'] = function ($c){
+$container['errorHandler'] = function ($c){
 	return function ($request, $response, $exception) use ($c){
 		$statusCode = $exception -> getCode() ? $exception-> getCode() : 500;
 		return $c['response'] -> withStatus($statusCode) -> withHeader('Content-type','application/json')
 		->withJson(['message' => $exception-> getMessage()], $statusCode);
 	};
 };
-
 
 $isDevMode = true;
 
