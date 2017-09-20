@@ -144,13 +144,34 @@ $app->put('/cidadao/alterar', function (Request $request, Response $response) us
 		);
 		$return = $response-> withJson($error);
 		return $return;
-	}   			
+	}  
 
-	
-		
+});
+$app->put('/cidadao/desativar', function (Request $request, Response $response) use ($app) {
 
-	
+		$entityManager = $this->get('em');
+    
 
-		
+		try{
+		$loginRepository = $entityManager->getRepository('App\Models\Entity\Login');
+		$login = $loginRepository->find($request->getParam('id_login'));
+		$login->setStatus_login(false);
+
+
+		$entityManager->merge($login);
+		$entityManager->flush();
+
+		$return = $response->withJson(["result" => true],201)->withHeader('Content-type', 'application/json');
+		return $return;
+
+		}catch(Exception $ex){
+		$error = array(
+			'Code' => $ex->getCode(),
+			'Message'=> $ex->getMessage()
+		);
+		$return = $response-> withJson($error);
+		return $return;
+	}  
+
 
 });
