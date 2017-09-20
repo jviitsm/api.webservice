@@ -1,6 +1,7 @@
 <?php 
 
 namespace App\Models\Entity;
+use \Psr\Http\Message\ServerRequestInterface as Request;
 
 /**
 
@@ -9,6 +10,30 @@ namespace App\Models\Entity;
 **/
 
 class Login {
+
+    public function LoginFull(Request $request)
+    {
+        if(!$request->getBody()){
+            throw new \Exception("Corpo da requisição vazio", 404);
+        } else {
+            try{
+                $this ->setLogin($request->getParam('login'));
+                $this ->setEmail($request->getParam('email'));
+                $this ->setSenha($request->getParam('senha'));
+                $this ->setStatus_login($request->getParam('status_login'));
+                $this ->setAsAdministrador($request->getParam('administrador'));
+            }catch (\Exception $ex){
+                throw new \Exception($ex->getMessage(), $ex->getCode());
+            }
+        }
+
+    }
+
+    public function Login(){
+
+    }
+
+
     /**
      * @var int 
      * @id @Column(type="integer")
@@ -36,7 +61,7 @@ class Login {
      */
     public $status_login;
     /**
-     *@var string
+     *  @var string
      * @Column(type="boolean")
      */
     public $administrador;
@@ -89,6 +114,4 @@ class Login {
         $this->administrador = $administrador;
     }
 }
-
-
 ?>
