@@ -93,10 +93,6 @@ $app->get('/empresa/exibir/{id}', function(Request $request, Response $response)
 
 		}
 
-
-
-
-
 	}catch(Exception $ex){
 		$error = array(
 			'Code' => $ex->getCode(),

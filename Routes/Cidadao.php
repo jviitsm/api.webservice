@@ -40,7 +40,6 @@ $app -> post('/cidadao/cadastrar', function(Request $request, Response $response
 		$cidadao ->setEstado($request->getParam('estado'));
 		$cidadao ->setCidade($request->getParam('cidade'));
 		$cidadao ->setDir_foto_usuario($request->getParam('dir_foto_usuario'));
-						//salvando cidadao
 		$entityManager->persist($cidadao);
 		$entityManager->flush();
 
@@ -98,3 +97,60 @@ $app->get('/cidadao/exibir/{id}', function(Request $request, Response $response)
 	return $return;
 });
 
+$app->put('/cidadao/alterar', function (Request $request, Response $response) use ($app) {
+  
+
+	$entityManager = $this->get('em');
+    
+
+		try{
+		$cidadao = new Cidadao();
+		$login = new Login();
+
+		$fk_login_cidadao = $request->getParam('fk_login_cidadao');
+										//setando valores do objeto login
+		$login ->setId_login($fk_login_cidadao['id_login']);
+		$login ->setLogin($fk_login_cidadao['login']);
+		$login ->setEmail($fk_login_cidadao['email']);
+		$login ->setSenha($fk_login_cidadao['senha']);
+		$login ->setStatus_login($fk_login_cidadao['status_login']);
+		$login ->setAsAdministrador($fk_login_cidadao['administrador']);
+						//salvando login       
+		$entityManager->merge($login);
+		$entityManager->flush();
+
+		$loginRepository = $entityManager->getRepository('App\Models\Entity\Login');
+		$loginCidadao = $loginRepository->find($login->getId_login());
+
+		$cidadao->setId_cidadao($request->getParam('id_cidadao'));
+		$cidadao->setNome($request->getParam('nome'));
+		$cidadao->setSexo($request->getParam('sexo'));
+		$cidadao->setSobrenome($request->getParam('sobrenome'));
+		$cidadao->setEstado($request->getParam('estado'));
+		$cidadao->setCidade($request->getParam('cidade'));
+		$cidadao->setDir_foto_usuario($request->getParam('dir_foto_usuario'));
+		$cidadao ->setFk_login_cidadao($loginCidadao);
+		
+		$entityManager->merge($cidadao);
+		$entityManager->flush();
+
+		$return = $response->withJson(["result" => true],201)->withHeader('Content-type', 'application/json');
+		return $return;
+		
+		}catch(Exception $ex){
+		$error = array(
+			'Code' => $ex->getCode(),
+			'Message'=> $ex->getMessage()
+		);
+		$return = $response-> withJson($error);
+		return $return;
+	}   			
+
+	
+		
+
+	
+
+		
+
+});
