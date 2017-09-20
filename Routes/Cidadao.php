@@ -173,5 +173,43 @@ $app->put('/cidadao/desativar', function (Request $request, Response $response) 
 		return $return;
 	}  
 
-
 });
+$app->post('/cidadao/login', function (Request $request, Response $response) use ($app) {
+
+	$entityManager = $this->get('em');
+	$loginParametro = $request->getParam('login');
+	$senhaParametro = $request->getParam('senha');
+
+	try
+	{
+
+		$query = $entityManager->createQuery("SELECT c, l FROM App\Models\Entity\Cidadao c JOIN c.fk_login_cidadao l WHERE l = l.id_login AND l.login = :login AND l.senha = :senha");
+		$query->setParameter(":login", $loginParametro);
+		$query->setParameter(":senha",$senhaParametro);
+
+		$cidadao = $query->getResult();
+		if($cidadao)
+		{
+		$return = $response -> withJson($cidadao, 200);
+		return $return;
+		}else
+		{
+			throw new \Exception("Cidadão not found", 404);
+		}
+
+
+	}catch(Exception $ex){
+		$error = array(
+			'Code' => $ex->getCode(),
+			'Message'=> $ex->getMessage()
+		);
+		$return = $response-> withJson($error);
+		return $return;
+	}  
+
+
+
+
+
+
+});	
