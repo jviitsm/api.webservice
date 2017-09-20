@@ -38,7 +38,7 @@ $conn = array(
 	'driver' => 'pdo_mysql',
 	'host' => '127.0.0.1',
 	'user' => 'root',/*citycare_web*/
-	'password' => '',/*T0*oO3HfwSzv*/
+	'password' => 'root',/*T0*oO3HfwSzv*/
 	'dbname' => 'citycare_db'
 );
 
