@@ -14,7 +14,6 @@ $configs = [
 	],
 ];
 
-
 /**
  * Container Resources do Slim.
  */
