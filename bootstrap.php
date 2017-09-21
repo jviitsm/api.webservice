@@ -36,9 +36,9 @@ $config = Setup::createAnnotationMetadataConfiguration(array(__DIR__."/src/Model
 
 $conn = array(
 	'driver' => 'pdo_mysql',
-	'host' => '127.0.0.1',
-	'user' => 'root',/*citycare_web*/
-	'password' => 'root',/*T0*oO3HfwSzv*/
+	'host' => 'localhost',
+	'user' => 'citycare_web',/**/
+	'password' => 'T0*oO3HfwSzv',/**/
 	'dbname' => 'citycare_db'
 );
 

@@ -19,7 +19,8 @@ $app->post('/login', function (Request $request, Response $response) use ($app) 
         $senhaParametro = $request->getParam('senha');
         try
         {
-            $query = $entityManager->createQuery("SELECT c, l FROM App\Models\Entity\Cidadao c JOIN c.fk_login_cidadao l WHERE l = l.id_login AND l.login = :login AND l.senha = :senha");
+            $query = $entityManager->createQuery("SELECT c, l FROM App\Models\Entity\Cidadao c JOIN c.fk_login_cidadao l
+            WHERE l = l.id_login AND l.login = :login AND l.senha = :senha");
             //Parametros da query
             $query->setParameters(
                 array(':login' => $loginParametro,
