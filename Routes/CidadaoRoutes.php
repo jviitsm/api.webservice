@@ -6,7 +6,7 @@ use App\Models\Entity\Cidadao;
 
 $app -> post('/cidadao/cadastrar', function(Request $request, Response $response) use ($app){
 
-    if(!$request->getBody()){
+    if(!$request->getParsedBody()){
         throw new Exception("Corpo de requisição vazio", 204);
     } else {
         //Container do EntityManager
@@ -82,7 +82,7 @@ $app->get('/cidadao/exibir/{id}', function(Request $request, Response $response)
 });
 
 $app->put('/cidadao/alterar', function (Request $request, Response $response) use ($app) {
-    if(!$request->getBody()){
+    if(!$request->getParsedBody()){
         throw new Exception("Corpo de requisição vazio", 204);
     }
     $entityManager = $this->get('em');
@@ -127,7 +127,7 @@ $app->put('/cidadao/alterar', function (Request $request, Response $response) us
 
 $app->put('/cidadao/desativar', function (Request $request, Response $response) use ($app) {
 
-    if(!$request->getBody()){
+    if(!$request->getParsedBody()){
         throw new Exception("Corpo de requisição vazio", 204);
     }
     else {

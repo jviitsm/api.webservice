@@ -9,12 +9,12 @@ use App\Models\Entity\Denuncia;
 
 $app->post('/denuncia/cadastrar', function (Request $request, Response $response) use ($app) {
 
-    if(!$request->getBody()){
+    if(!$request->getParsedBody()){
         throw new Exception("Corpo de requisição vazio", 204);
     }else {
         $entityManager = $this->get('em');
         try{
-            $fk_login_denuncia = ($request->getParam('fk_login_cidadao'));
+            $fk_login_denuncia = ($request->getParam('fk_login_denuncia'));
             $fk_categoria_denuncia= ($request->getParam('fk_categoria_denuncia'));
 
             $denuncia = new Denuncia();
@@ -47,9 +47,4 @@ $app->post('/denuncia/cadastrar', function (Request $request, Response $response
         } return $return;
 
     }
-
-
-
-
-
 });
