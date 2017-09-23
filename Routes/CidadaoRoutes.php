@@ -63,7 +63,7 @@ $app->post('/cidadao/exibir', function(Request $request, Response $response) use
     try{
         $id = $request->getParam('id_cidadao');
         //Query em Doctrine para conrtornar o erro de Proxy
-		$query = $entityManager->createQuery("SELECT c, l FROM App\Models\Entity\Cidadao c JOIN c.fk_login_cidadao l 
+		$query = $entityManager->createQuery("SELECT c, l.id_login FROM App\Models\Entity\Cidadao c JOIN c.fk_login_cidadao l 
         WHERE l = l.id_login AND c.id_cidadao = :id")->setParameter(":id", $id);
 
 		$cidadao = $query->getResult();

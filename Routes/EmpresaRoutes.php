@@ -61,8 +61,6 @@ $app -> post('/empresa/cadastrar', function(Request $request, Response $response
         return $return;
     }
 
-
-
 });
 
 	//retornar Empresa específica
@@ -76,13 +74,11 @@ $app->post('/empresa/exibir', function(Request $request, Response $response) use
 
         $id = $request->getParam('id_empresa');
 
-				//Query em Doctrine para conrtornar o erro de Proxy
+            //Query em Doctrine para conrtornar o erro de Proxy
 		$query = $entityManager->createQuery("SELECT c, l FROM App\Models\Entity\Empresa c JOIN c.fk_login_empresa l 
         WHERE l = l.id_login AND c.id_empresa = :id")->setParameter(":id", $id);
-		
-		
-		$empresa = $query -> getResult();
 
+		$empresa = $query -> getResult();
 
 		if(!$empresa)
 		{
@@ -96,6 +92,7 @@ $app->post('/empresa/exibir', function(Request $request, Response $response) use
 	} 
 	return $return;
 });
+
 $app->put('/empresa/desativar', function(Request $request, Response $response) use ($app){
     if(!$request->getParsedBody()){
         throw new Exception("Corpo de requisição vazio", 204);
