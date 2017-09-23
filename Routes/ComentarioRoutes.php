@@ -7,7 +7,6 @@ use App\Models\Entity\Login;
 use App\Models\Entity\Comentario;
 
 $app->post('/comentario/cadastrar', function (Request $request, Response $response) use ($app) {
-
     if(!$request->getParsedBody()){
         throw new Exception("Corpo de requisição vazio", 204);
     }else{
@@ -37,6 +36,39 @@ $app->post('/comentario/cadastrar', function (Request $request, Response $respon
 
             $return = $response->withJson(["result" => true],201)->withHeader('Content-type', 'application/json');
 
+        }catch(Exception $ex)
+        {
+            throw new Exception($ex->getMessage(), $ex->getCode());
+        } return $return;
+    }
+});
+
+$app->post('/comentario/exibir', function (Request $request, Response $response) use ($app) {
+
+    if(!$request->getParsedBody()){
+        throw new Exception("Corpo de requisição vazio", 204);
+    }else{
+        $entityManager = $this->get('em');
+        try{
+            $idComentarioParametro = $request->getParam('id_comentario');
+
+            $query = $entityManager->createQuery("SELECT c, l,d,cat FROM App\Models\Entity\Comentario c 
+            JOIN c.fk_login_comentario l
+            JOIN c.fk_denuncia_comentario d
+            JOIN d.fk_categoria_denuncia cat
+            WHERE l = l.id_login 
+            AND d = d.id_denuncia
+            AND cat = cat.id_categoria 
+            AND c.id_comentario = :id")->setParameter(":id", $idComentarioParametro);
+
+            $comentario = $query->getResult();
+
+            if($comentario){
+                $return = $response->withJson($comentario, 200);
+            }
+            else{
+                throw new Exception("Cidadão não encontrado", 404);
+            }
 
         }catch(Exception $ex)
         {

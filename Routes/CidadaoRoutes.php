@@ -54,30 +54,30 @@ $app -> post('/cidadao/cadastrar', function(Request $request, Response $response
 
 
 	//retornar Cidadão específico
-$app->get('/cidadao/exibir/{id}', function(Request $request, Response $response) use ($app){
+$app->post('/cidadao/exibir', function(Request $request, Response $response) use ($app){
+    $entityManager = $this->get('em');
 
+    if(!$request->getParsedBody()){
+        throw new Exception("Corpo de requisição vazio", 204);
+    }
     try{
-        //pegando parâmetro do link
-		$route = $request -> getAttribute('route');
-		$id = $route -> getArgument('id');
-		$entityManager = $this->get('em');
-
+        $id = $request->getParam('id_cidadao');
         //Query em Doctrine para conrtornar o erro de Proxy
-		$query = $entityManager->createQuery("SELECT c, l FROM App\Models\Entity\Cidadao c JOIN c.fk_login_cidadao l WHERE l = l.id_login AND c.id_cidadao = :id")->setParameter(":id", $id);
-		//Pegando resultado da query
-		$cidadao = $query -> getResult();
+		$query = $entityManager->createQuery("SELECT c, l FROM App\Models\Entity\Cidadao c JOIN c.fk_login_cidadao l 
+        WHERE l = l.id_login AND c.id_cidadao = :id")->setParameter(":id", $id);
 
-		//Se cidadão for nulo
-        if(!$cidadao)
-		{
+		$cidadao = $query->getResult();
+
+		if(!$cidadao){
             throw new Exception("Cidadão não encontrado", 404);
-		}
+        }
 
 		$return = $response->withJson($cidadao, 200);
+
 	}catch(Exception $ex){
 		//Exception do banco
 	    throw new Exception($ex->getMessage(), $ex->getCode());
-	} 
+	}
 	return $return;
 });
 

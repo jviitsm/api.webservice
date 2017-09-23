@@ -65,17 +65,20 @@ $app -> post('/empresa/cadastrar', function(Request $request, Response $response
 
 });
 
-
 	//retornar Empresa específica
-$app->get('/empresa/exibir/{id}', function(Request $request, Response $response) use ($app){
-	try{
-				//pegando parâmetro do link
-		$route = $request -> getAttribute('route');
-		$id = $route -> getArgument('id');
+$app->post('/empresa/exibir', function(Request $request, Response $response) use ($app){
 
-		$entityManager = $this->get('em');
+    if(!$request->getParsedBody()){
+        throw new Exception("Corpo de requisição vazio", 204);
+    }
+    try{
+        $entityManager = $this->get('em');
+
+        $id = $request->getParam('id_empresa');
+
 				//Query em Doctrine para conrtornar o erro de Proxy
-		$query = $entityManager->createQuery("SELECT c, l FROM App\Models\Entity\Empresa c JOIN c.fk_login_empresa l WHERE l = l.id_login AND c.id_empresa = :id")->setParameter(":id", $id);
+		$query = $entityManager->createQuery("SELECT c, l FROM App\Models\Entity\Empresa c JOIN c.fk_login_empresa l 
+        WHERE l = l.id_login AND c.id_empresa = :id")->setParameter(":id", $id);
 		
 		
 		$empresa = $query -> getResult();
@@ -92,4 +95,25 @@ $app->get('/empresa/exibir/{id}', function(Request $request, Response $response)
         throw new Exception($ex->getMessage(), $ex->getCode());
 	} 
 	return $return;
+});
+$app->put('/empresa/desativar', function(Request $request, Response $response) use ($app){
+    if(!$request->getParsedBody()){
+        throw new Exception("Corpo de requisição vazio", 204);
+    }
+    else {
+        $entityManager = $this->get('em');
+        try {
+            $loginRepository = $entityManager->getRepository('App\Models\Entity\Login');
+            $login = $loginRepository->find($request->getParam('id_login'));
+            $login->setStatus_login(false);
+
+            $entityManager->merge($login);
+            $entityManager->flush();
+
+            $return = $response->withJson(["result" => true], 201)->withHeader('Content-type', 'application/json');
+        } catch (Exception $ex) {
+            throw new Exception($ex->getMessage(), $ex->getCode());
+        }
+        return $return;
+    }
 });
