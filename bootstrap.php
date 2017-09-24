@@ -64,7 +64,7 @@ $app->add(new \Slim\Middleware\HttpBasicAuthentication([
      * Usuários existentes
      */
     "users" => [
-        "root" => "toor"
+        "root" => "carecity"
     ],
     /**
      * Blacklist - Deixa todas liberadas e só protege as dentro do array

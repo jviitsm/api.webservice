@@ -18,9 +18,9 @@ require 'Routes/ComentarioRoutes.php';
 $app->get('/auth', function (Request $request, Response $response) use ($app) {
     $key = $this->get("secretkey");
     $token = array(
-        "user" => "@fidelissauro",
-        "twitter" => "https://twitter.com/fidelissauro",
-        "github" => "https://github.com/msfidelis"
+        "user" => "CityCare",
+        "senha" => "projetocitycare",
+        "desenvolvedores" => "bruno e jv"
     );
     $jwt = JWT::encode($token, $key);
     return $response->withJson(["auth-jwt" => $jwt], 200)
