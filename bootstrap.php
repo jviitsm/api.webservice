@@ -20,9 +20,6 @@ $configs = [
  */
 $container = new \Slim\Container($configs);
 
-
-
-
 $container['errorHandler'] = function ($c){
 	return function ($request, $response, $exception) use ($c){
 		$statusCode = $exception -> getCode() ? $exception-> getCode() : 500;
@@ -49,6 +46,11 @@ $conn = array(
 $entityManager = EntityManager::create($conn,$config);
 
 $container['em'] = $entityManager;
+/**
+ * Token do nosso JWT
+ */
+$container['secretkey'] = "dramam";
+
 
 $app = new \Slim\App($container);
 
@@ -57,22 +59,13 @@ $app->add(new TrailingSlash(false));
 /**
  * Auth básica HTTP
  */
-$app->add(new \Slim\Middleware\HttpBasicAuthentication([
-    /**
-     * Usuários existentes
-     */
-    "users" => [
-        "root" => "toor"
-    ],
-    /**
-     * Blacklist - Deixa todas liberadas e só protege as dentro do array
-     */
-    "path" => ["/auth"],
-    /**
-     * Whitelist - Protege todas as rotas e só libera as de dentro do array
-     */
-    //"passthrough" => ["/auth/liberada", "/admin/ping"],
-]));
+
+/**
+ * Auth básica do JWT
+ * Whitelist - Bloqueia tudo, e só libera os
+ * itens dentro do "passthrough"
+ */
+
 
 
 

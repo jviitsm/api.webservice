@@ -17,7 +17,6 @@ class ComposerStaticInit313294889bd446a244c7f4341626cb9f
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Component\\Debug\\' => 24,
             'Symfony\\Component\\Console\\' => 26,
-            'Slim\\Middleware\\' => 16,
             'Slim\\' => 5,
         ),
         'P' => 
@@ -33,7 +32,6 @@ class ComposerStaticInit313294889bd446a244c7f4341626cb9f
         ),
         'F' => 
         array (
-            'Firebase\\JWT\\' => 13,
             'FastRoute\\' => 10,
         ),
         'D' => 
@@ -62,10 +60,6 @@ class ComposerStaticInit313294889bd446a244c7f4341626cb9f
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
         ),
-        'Slim\\Middleware\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/tuupola/slim-basic-auth/src',
-        ),
         'Slim\\' => 
         array (
             0 => __DIR__ . '/..' . '/slim/slim/Slim',
@@ -89,10 +83,6 @@ class ComposerStaticInit313294889bd446a244c7f4341626cb9f
         'Interop\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/container-interop/container-interop/src/Interop/Container',
-        ),
-        'Firebase\\JWT\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/firebase/php-jwt/src',
         ),
         'FastRoute\\' => 
         array (
