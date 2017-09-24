@@ -54,6 +54,7 @@ $container['secretkey'] = "secretloko";
 
 $app = new \Slim\App($container);
 
+//Middleware que controla a barra após a url
 $app->add(new TrailingSlash(false));
 
 /**
