@@ -17,6 +17,7 @@ class ComposerStaticInit313294889bd446a244c7f4341626cb9f
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Component\\Debug\\' => 24,
             'Symfony\\Component\\Console\\' => 26,
+            'Slim\\Middleware\\' => 16,
             'Slim\\' => 5,
         ),
         'P' => 
@@ -59,6 +60,10 @@ class ComposerStaticInit313294889bd446a244c7f4341626cb9f
         'Symfony\\Component\\Console\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
+        ),
+        'Slim\\Middleware\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/tuupola/slim-basic-auth/src',
         ),
         'Slim\\' => 
         array (
