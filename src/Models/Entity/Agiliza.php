@@ -10,13 +10,13 @@ namespace App\Models\Entity;
 class Agiliza{
     /** 
      * @Id
-     * @OneToOne(targetEntity="Login")
+     * @OneToOne(targetEntity="Login", fetch="EAGER")
      * @JoinColumn(name="fk_login_agiliza", referencedColumnName="id_login")
      */
     private $fk_login_agiliza;
     /** 
      * @Id
-     * @OneToOne(targetEntity="Denuncia")
+     * @OneToOne(targetEntity="Denuncia", fetch="EAGER")
      * @JoinColumn(name="fk_denuncia_agiliza", referencedColumnName="id_denuncia")
      *        */
     private $fk_denuncia_agiliza;

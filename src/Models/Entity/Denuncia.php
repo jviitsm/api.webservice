@@ -46,17 +46,17 @@ class Denuncia{
      */
     public $status_denuncia;
         /**
-        * @OneToOne(targetEntity="Solucao")
+        * @OneToOne(targetEntity="Solucao", fetch="EAGER")
         * @JoinColumn(name="fk_solucao_denuncia", referencedColumnName="id_solucao")
         */
     public $fk_solucao_denuncia;
         /**
-        * @OneToOne(targetEntity="Categoria")
+        * @OneToOne(targetEntity="Categoria", fetch="EAGER")
         * @JoinColumn(name="fk_categoria_denuncia", referencedColumnName="id_categoria")
         */
     public $fk_categoria_denuncia;
         /**
-        * @OneToOne(targetEntity="Login")
+        * @OneToOne(targetEntity="Login", fetch="EAGER")
         * @JoinColumn(name="fk_login_denuncia", referencedColumnName="id_login")
         */
     public $fk_login_denuncia;

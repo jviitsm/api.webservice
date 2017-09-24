@@ -147,3 +147,4 @@ $app->put('/cidadao/desativar', function (Request $request, Response $response) 
         return $return;
     }
 });
+

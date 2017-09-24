@@ -14,20 +14,86 @@ class Solucao{
      * @Id @Column(type="integer")
      * @GeneratedValue
      */
-    protected $id_solucao;
+    public $id_solucao;
     /** 
      * @var string
      * @Column(type="string")
      */ 
-    protected $descricao_solucao;
+    public $descricao_solucao;
     /** 
      * @var string
      * @Column(type="string")
      */ 
-    protected $dir_foto_solucao;
+    public $dir_foto_solucao;
     /** 
      * @var string
      * @Column(type="datetime")
      */ 
-    protected $data_solucao;
+    public $data_solucao;
+
+    /**
+     * @return int
+     */
+    public function getIdSolucao()
+    {
+        return $this->id_solucao;
+    }
+
+    /**
+     * @param int $id_solucao
+     */
+    public function setIdSolucao($id_solucao)
+    {
+        $this->id_solucao = $id_solucao;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDescricaoSolucao()
+    {
+        return $this->descricao_solucao;
+    }
+
+    /**
+     * @param string $descricao_solucao
+     */
+    public function setDescricaoSolucao($descricao_solucao)
+    {
+        $this->descricao_solucao = $descricao_solucao;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDirFotoSolucao()
+    {
+        return $this->dir_foto_solucao;
+    }
+
+    /**
+     * @param string $dir_foto_solucao
+     */
+    public function setDirFotoSolucao($dir_foto_solucao)
+    {
+        $this->dir_foto_solucao = $dir_foto_solucao;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDataSolucao()
+    {
+        return $this->data_solucao;
+    }
+
+    /**
+     * @param string $data_solucao
+     */
+    public function setDataSolucao($data_solucao)
+    {
+        $this->data_solucao = $data_solucao;
+    }
+
+
 }

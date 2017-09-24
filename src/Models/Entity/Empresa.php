@@ -46,7 +46,7 @@ class Empresa{
          */ 
 	public $dir_foto_usuario;
         /**
-        * @OneToOne(targetEntity="Login")
+        * @OneToOne(targetEntity="Login", fetch="EAGER")
         * @JoinColumn(name="fk_login_empresa", referencedColumnName="id_login")
         */
 	public $fk_login_empresa;

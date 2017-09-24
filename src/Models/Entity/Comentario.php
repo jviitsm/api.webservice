@@ -20,7 +20,7 @@ class Comentario{
      */
     public $fk_login_comentario;
     /** 
-     * @OneToOne(targetEntity="Denuncia")
+     * @OneToOne(targetEntity="Denuncia", fetch="EAGER")
      * @JoinColumn(name="fk_denuncia_comentario", referencedColumnName="id_denuncia")
     */
     public $fk_denuncia_comentario;
