@@ -4,6 +4,7 @@ require './vendor/autoload.php';
 
 use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager;
+use Psr7Middlewares\Middleware\TrailingSlash;
 
 //Configurações
 $configs = [
@@ -18,6 +19,7 @@ $configs = [
  * Container Resources do Slim.
  */
 $container = new \Slim\Container($configs);
+
 
 
 $container['errorHandler'] = function ($c){
@@ -48,4 +50,8 @@ $entityManager = EntityManager::create($conn,$config);
 $container['em'] = $entityManager;
 
 $app = new \Slim\App($container);
+$app->add(new TrailingSlash(false));
+
+
+
  ?>
