@@ -50,24 +50,15 @@ $app->post('/comentario/exibir', function (Request $request, Response $response)
     }else{
         $entityManager = $this->get('em');
         try{
-            $idComentarioParametro = $request->getParam('id_comentario');
+            $id = $request->getParam('id_comentario');
 
-            $query = $entityManager->createQuery("SELECT c, l,d,cat FROM App\Models\Entity\Comentario c 
-            JOIN c.fk_login_comentario l
-            JOIN c.fk_denuncia_comentario d
-            JOIN d.fk_categoria_denuncia cat
-            WHERE l = l.id_login 
-            AND d = d.id_denuncia
-            AND cat = cat.id_categoria 
-            AND c.id_comentario = :id")->setParameter(":id", $idComentarioParametro);
-
-            $comentario = $query->getResult();
+            $comentario = $entityManager->find('App\Models\Entity\Comentario', $id);
 
             if($comentario){
                 $return = $response->withJson($comentario, 200);
             }
             else{
-                throw new Exception("Cidadão não encontrado", 404);
+                throw new Exception("Comentario não encontrado", 404);
             }
 
         }catch(Exception $ex)

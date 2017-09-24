@@ -74,13 +74,9 @@ $app->post('/empresa/exibir', function(Request $request, Response $response) use
 
         $id = $request->getParam('id_empresa');
 
-            //Query em Doctrine para conrtornar o erro de Proxy
-		$query = $entityManager->createQuery("SELECT c, l FROM App\Models\Entity\Empresa c JOIN c.fk_login_empresa l 
-        WHERE l = l.id_login AND c.id_empresa = :id")->setParameter(":id", $id);
+        $empresa = $entityManager->find('App\Models\Entity\Empresa', $id);
 
-		$empresa = $query -> getResult();
-
-		if(!$empresa)
+        if(!$empresa)
 		{
 		    throw new Exception("Nenhum Resultado", 404);
 		}
