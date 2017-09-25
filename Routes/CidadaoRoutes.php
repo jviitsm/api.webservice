@@ -44,6 +44,8 @@ $app -> post('/cidadao/cadastrar', function(Request $request, Response $response
             $entityManager->flush();
             //retornando confirmação do evento completo
             $return = $response->withJson(["result" => true],201)->withHeader('Content-type', 'application/json');
+            
+            
         } catch (Exception $ex){
             //código e mensagem do erro
             throw new Exception($ex->getMessage(), $ex->getCode());

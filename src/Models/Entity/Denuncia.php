@@ -51,7 +51,7 @@ class Denuncia{
         */
     public $fk_solucao_denuncia;
         /**
-        * @ManyToOne(targetEntity="Categoria", fetch="EAGER")
+        * @OneToOne(targetEntity="Categoria", fetch="EAGER")
         * @JoinColumn(name="fk_categoria_denuncia", referencedColumnName="id_categoria")
         */
     public $fk_categoria_denuncia;

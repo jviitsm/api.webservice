@@ -110,3 +110,49 @@ $app->put('/empresa/desativar', function(Request $request, Response $response) u
         return $return;
     }
 });
+$app->put('/empresa/alterar', function(Request $request, Response $response) use ($app){
+
+    if(!$request->getParsedBody()){
+        throw new Exception("Corpo de requisição vazio", 204);
+    }
+    $entityManager = $this->get('em');
+    try{
+        $empresa = new Empresa();
+        $login = new Login();
+
+        $fk_login_empresa = $request->getParam('fk_login_empresa');
+        //setando valores do objeto login
+        $login ->setId_login($fk_login_empresa['id_login']);
+        $login ->setLogin(fk_login_empresa['login']);
+        $login ->setEmail(fk_login_empresa['email']);
+        $login ->setSenha(fk_login_empresa['senha']);
+        $login ->setStatus_login(fk_login_empresa['status_login']);
+        $login ->setAsAdministrador(fk_login_empresa['administrador']);
+        //salvando login
+        $entityManager->merge($login);
+        $entityManager->flush();
+
+        $loginRepository = $entityManager->getRepository('App\Models\Entity\Login');
+        $loginCidadao = $loginRepository->find($login->getId_login());
+
+        $empresa->setId_cidadao($request->getParam('id_cidadao'));
+        $empresa->setNome($request->getParam('nome'));
+        $empresa->setSexo($request->getParam('sexo'));
+        $empresa->setSobrenome($request->getParam('sobrenome'));
+        $empresa->setEstado($request->getParam('estado'));
+        $empresa->setCidade($request->getParam('cidade'));
+        $empresa->setDir_foto_usuario($request->getParam('dir_foto_usuario'));
+        $empresa ->setFk_login_cidadao($loginCidadao);
+
+        $entityManager->merge($empresa);
+        $entityManager->flush();
+
+        $return = $response->withJson(["result" => true],201)->withHeader('Content-type', 'application/json');
+    }catch(Exception $ex){
+        throw new Exception($ex->getMessage(), $ex->getCode());
+    }
+    return $return;
+
+
+
+});

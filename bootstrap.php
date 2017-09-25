@@ -46,6 +46,7 @@ $conn = array(
 $entityManager = EntityManager::create($conn,$config);
 
 $container['em'] = $entityManager;
+
 /**
  * Token do nosso JWT
  */
@@ -65,7 +66,8 @@ $app->add(new \Slim\Middleware\HttpBasicAuthentication([
      * Usuários existentes
      */
     "users" => [
-        "root" => "carecity"
+        "root" => "carecity",
+        "jv" => "jviits"
     ],
     /**
      * Blacklist - Deixa todas liberadas e só protege as dentro do array

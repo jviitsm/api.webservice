@@ -17,14 +17,31 @@ require 'Routes/ComentarioRoutes.php';
  */
 $app->get('/auth', function (Request $request, Response $response) use ($app) {
     $key = $this->get("secretkey");
+
+    /*
+    $now = new DateTime();
+    $future = new DateTime("now +1 hour");
+
+   $payload = [
+        "user" => "jv",
+        "passsword" => "jviits",
+        "iat" => $now->getTimeStamp(),
+        "nbf" => $future->getTimeStamp()
+    ];*/
     $token = array(
         "user" => "CityCare",
         "senha" => "projetocitycare",
         "desenvolvedores" => "bruno e jv"
     );
-    $jwt = JWT::encode($token, $key);
+
+
+    $jwt = JWT::encode($token,$key);
+
+
     return $response->withJson(["auth-jwt" => $jwt], 200)
         ->withHeader('Content-type', 'application/json');
+
+
 });
 
 $app->run();
