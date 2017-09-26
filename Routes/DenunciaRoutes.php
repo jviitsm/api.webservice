@@ -48,3 +48,20 @@ $app->post('/denuncia/cadastrar', function (Request $request, Response $response
 
     }
 });
+    $app->post('/denuncia/exibir', function (Request $request, Response $response) use ($app) {
+
+        $entityManager = $this->get('em');
+
+        try{
+            $id = $request->getParam('id_denuncia');
+
+            $denunciaRepository = $entityManager->getRepository('App\Models\Entity\Denuncia');
+            $denuncia = $denunciaRepository->find($id);
+            $return = $response->withJson($denuncia, 200);
+
+        }catch(Exception $ex)
+        {
+            throw new Exception($ex->getMessage(), $ex->getCode());
+        } return $return;
+
+    });
