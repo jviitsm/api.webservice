@@ -87,6 +87,8 @@ $app->add(new \Slim\Middleware\JwtAuthentication([
     "passthrough" => ["/auth"], //Vamos adicionar a exceção de cobertura a rota /auth
     "realm" => "Protected",
     "secret" => $container['secretkey'],
+    "secure" => true,
+    "relaxed" => ["localhost"],
     "error" => function ($request, $response, $arguments) {
         $data["code"] = "401";
         $data["message"] = $arguments["message"];
