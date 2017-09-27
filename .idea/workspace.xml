@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="50cf916c-80ea-4e71-ba71-5d0e77411230" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Routes/LoginRoutes.php" afterPath="$PROJECT_DIR$/Routes/LoginRoutes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bootstrap.php" afterPath="$PROJECT_DIR$/bootstrap.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,17 +15,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LoginRoutes.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Routes/LoginRoutes.php">
+      <file leaf-file-name="bootstrap.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bootstrap.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="32" column="20" lean-forward="false" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+            <state relative-caret-position="464">
+              <caret line="95" column="5" lean-forward="false" selection-start-line="95" selection-start-column="5" selection-end-line="95" selection-end-column="5" />
               <folding>
-                <marker date="1506476194321" expanded="true" signature="648:794" ph="SELECT c, l App" />
-                <marker date="1506476194321" expanded="true" signature="1203:1349" ph="SELECT c, l App" />
-                <marker date="1506476194321" expanded="true" signature="1793:1939" ph="SELECT c, l App" />
-                <marker date="1506476194321" expanded="true" signature="2416:2562" ph="SELECT c, l App" />
+                <element signature="e#42#71#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JwtAuthentication.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/tuupola/slim-jwt-auth/src/JwtAuthentication.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="202">
+              <caret line="60" column="20" lean-forward="false" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -51,11 +59,11 @@
         <option value="$PROJECT_DIR$/src/Models/Entity/Agiliza.php" />
         <option value="$PROJECT_DIR$/src/Models/Entity/Denuncia.php" />
         <option value="$PROJECT_DIR$/Routes/CidadaoRoutes.php" />
-        <option value="$PROJECT_DIR$/bootstrap.php" />
         <option value="$PROJECT_DIR$/Routes/EmpresaRoutes.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/Routes/DenunciaRoutes.php" />
         <option value="$PROJECT_DIR$/Routes/LoginRoutes.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/bootstrap.php" />
       </list>
     </option>
   </component>
@@ -164,7 +172,7 @@
       <workItem from="1506381035471" duration="2307000" />
       <workItem from="1506443204688" duration="271000" />
       <workItem from="1506461924816" duration="2176000" />
-      <workItem from="1506475550854" duration="731000" />
+      <workItem from="1506475550854" duration="2338000" />
     </task>
     <task id="LOCAL-00001" summary="Implementação do cadastro de denuncias, foi alterado o tipo de data de denuncia para string(LEMBRAR DE MUDAR NO PHPMYADMIN DO SERVIDOR)">
       <created>1506044073049</created>
@@ -264,11 +272,18 @@
       <option name="project" value="LOCAL" />
       <updated>1506464012543</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Login refatorado">
+      <created>1506476301780</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1506476301780</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40495000" />
+    <option name="totallyTimeSpent" value="42102000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -315,9 +330,9 @@
     <MESSAGE value="Comentario adicionado" />
     <MESSAGE value="Alterar empresa" />
     <MESSAGE value="new token" />
-    <MESSAGE value="Login refatorado" />
     <MESSAGE value="Login refatorado, agora funciona em 1 só método, e verifica se foi por email ou login, funciona para empresa e para cidadao" />
-    <option name="LAST_COMMIT_MESSAGE" value="Login refatorado, agora funciona em 1 só método, e verifica se foi por email ou login, funciona para empresa e para cidadao" />
+    <MESSAGE value="Login refatorado" />
+    <option name="LAST_COMMIT_MESSAGE" value="Login refatorado" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -661,13 +676,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/tuupola/slim-jwt-auth/src/JwtAuthentication.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2314">
-          <caret line="60" column="20" lean-forward="false" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Models/Entity/Cidadao.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-437">
@@ -692,13 +700,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/firebase/php-jwt/src/JWT.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2176">
-          <caret line="131" column="38" lean-forward="false" selection-start-line="131" selection-start-column="35" selection-end-line="131" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cli-config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -712,26 +713,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bootstrap.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="18" lean-forward="true" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
-          <folding>
-            <element signature="e#42#71#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="29" column="30" lean-forward="false" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
-          <folding>
-            <element signature="e#6#62#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -777,6 +758,40 @@
             <marker date="1506476194321" expanded="true" signature="1203:1349" ph="SELECT c, l App" />
             <marker date="1506476194321" expanded="true" signature="1793:1939" ph="SELECT c, l App" />
             <marker date="1506476194321" expanded="true" signature="2416:2562" ph="SELECT c, l App" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="19" lean-forward="true" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/firebase/php-jwt/src/JWT.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2861">
+          <caret line="21" column="6" lean-forward="false" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/tuupola/slim-jwt-auth/src/JwtAuthentication.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="60" column="20" lean-forward="false" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="95" column="5" lean-forward="false" selection-start-line="95" selection-start-column="5" selection-end-line="95" selection-end-column="5" />
+          <folding>
+            <element signature="e#42#71#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
