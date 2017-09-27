@@ -87,13 +87,12 @@ $app->add(new \Slim\Middleware\JwtAuthentication([
     "passthrough" => ["/auth"], //Vamos adicionar a exceção de cobertura a rota /auth
     "realm" => "Protected",
     "secret" => $container['secretkey'],
-    "secure" => true,
-    "relaxed" => ["localhost"],
+    "secure" => false,
     "error" => function ($request, $response, $arguments) {
         $data["code"] = "401";
         $data["message"] = $arguments["message"];
         return $response
-            ->withHeader("Content-Type", "application/json")
+            ->withHeader("Content-Type", "application/json")->withStatus(401)
             ->write(json_encode($data, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT));
     }
 

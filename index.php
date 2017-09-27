@@ -42,4 +42,6 @@ $app->get('/auth', function (Request $request, Response $response) use ($app) {
 
 });
 
+
 $app->run();
+
