@@ -15,6 +15,8 @@ require 'Routes/ComentarioRoutes.php';
 /**
  * HTTP Auth - Autenticação minimalista para retornar um JWT
  */
+
+
 $app->get('/auth', function (Request $request, Response $response) use ($app) {
     $key = $this->get("secretkey");
 
