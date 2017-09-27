@@ -14,71 +14,59 @@ $app->post('/login', function (Request $request, Response $response) use ($app) 
         throw new Exception("Corpo de requisição vazio", 204);
     } else {
         $entityManager = $this->get('em');
-        $emailParametro = $request->getParam('email');
         $senhaParametro = $request->getParam('senha');
         $loginParametro = $request->getParam('login');
         try {
-            //Verifica se o usuário realizou login digitando seu login
-            if ($loginParametro) {
-                $query = $entityManager->createQuery("SELECT c, l FROM App\Models\Entity\Cidadao c JOIN c.fk_login_cidadao l 
-            WHERE l = l.id_login AND l.login = :login AND l.senha = :senha");
-                //Parametros da query
-                $query->setParameters(
-                    array(':login' => $loginParametro,
-                        ':senha' => $senhaParametro));
-                //Resultado da query
+            //login por cidadao
 
-                $cidadao = $query->getResult();
-                //Verifica se o usuário é cidadao
-                if ($cidadao) {
-                    //O usuário é cidadao
-                    $return = $response->withJson($cidadao, 200);
-                } else if (!$cidadao) {
-                    //Os dados informados não correspondem a um cidadão
-                    $queryEmpresa = $entityManager->createQuery("SELECT c, l FROM App\Models\Entity\Empresa c JOIN c.fk_login_empresa l 
+            $query = $entityManager->createQuery("SELECT c, l FROM App\Models\Entity\Cidadao c JOIN c.fk_login_cidadao l 
             WHERE l = l.id_login AND l.login = :login AND l.senha = :senha");
-                    //Parametros da query
-                    $queryEmpresa->setParameters(
+            $query->setParameters(
+                array(':login' => $loginParametro,
+                    ':senha' => $senhaParametro));
+
+            $cidadaoPorLogin = $query->getResult();
+
+            if($cidadaoPorLogin){
+                $return = $response->withJson($cidadaoPorLogin, 200);
+            }
+            else if (!$cidadaoPorLogin) {
+                $query = $entityManager->createQuery("SELECT c, l FROM App\Models\Entity\Cidadao c JOIN c.fk_login_cidadao l 
+            WHERE l = l.id_login AND l.email = :email AND l.senha = :senha");
+                $query->setParameters(
+                    array(':email' => $loginParametro,
+                        ':senha' => $senhaParametro));
+                $cidadaoPorEmail = $query->getResult();
+
+                if($cidadaoPorEmail){
+                    $return = $response->withJson($cidadaoPorEmail, 200);
+                }
+                else if (!$cidadaoPorEmail) {
+                    $query = $entityManager->createQuery("SELECT c, l FROM App\Models\Entity\Empresa c JOIN c.fk_login_empresa l 
+            WHERE l = l.id_login AND l.login = :login AND l.senha = :senha");
+                    $query->setParameters(
                         array(':login' => $loginParametro,
                             ':senha' => $senhaParametro));
-                    $empresa = $queryEmpresa->getResult();
-                    //Verifica se o usuário é empresa
-                    if (!$empresa) {
-                        //Os dados informados não batem com nada no banco
-                        throw new Exception("Login ou Senha incorretos", 404);
-                    } else {
-                        //o usuário é empresa
-                        $return = $response->withJson($empresa, 200);
+                    $empresaPorLogin = $query->getResult();
+                    if($empresaPorLogin) {
+                        $return = $response->withJson($empresaPorLogin, 200);
                     }
-                }
-            }
-            //O usuário não digitou login e sim e-mail
-            else {
-
-                $query = $entityManager->createQuery("SELECT c, l FROM App\Models\Entity\Cidadao c JOIN c.fk_login_cidadao l 
+                   else if(!$empresaPorLogin){
+                        $query = $entityManager->createQuery("SELECT c, l FROM App\Models\Entity\Empresa c JOIN c.fk_login_empresa l 
             WHERE l = l.id_login AND l.email = :email AND l.senha = :senha");
-                //Parametros da query
-                $query->setParameters(
-                    array(':email' => $emailParametro,
-                        ':senha' => $senhaParametro));
-                //Resultado da query
+                        $query->setParameters(
+                            array(':email' => $loginParametro,
+                                ':senha' => $senhaParametro));
+                        $empresaPorEmail = $query->getResult();
+                        if($empresaPorEmail){
+                            $return = $response->withJson($empresaPorEmail, 200);
+                        }
+                        else{
+                            throw new Exception("Login ou Senha incorretos", 404);
 
-                $cidadao = $query->getResult();
-                if ($cidadao) {
-                    $return = $response->withJson($cidadao, 200);
-                } else if (!$cidadao) {
-                    $queryEmpresa = $entityManager->createQuery("SELECT c, l FROM App\Models\Entity\Empresa c JOIN c.fk_login_empresa l 
-            WHERE l = l.id_login AND l.email = :email AND l.senha = :senha");
-                    //Parametros da query
-                    $queryEmpresa->setParameters(
-                        array(':email' => $emailParametro,
-                            ':senha' => $senhaParametro));
-                    $empresa = $queryEmpresa->getResult();
-                    if (!$empresa) {
-                        throw new Exception("Login ou Senha incorretos", 404);
-                    } else {
-                        $return = $response->withJson($empresa, 200);
+                        }
                     }
+
                 }
             }
             return $return;
