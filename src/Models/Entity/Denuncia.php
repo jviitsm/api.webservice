@@ -23,7 +23,7 @@ class Denuncia{
     public $descricao_denuncia;
     /** 
      * @var string
-     * @Column(type="string", length=200)
+     * @Column(type="string", length=200, nullable=true)
      */
     public $dir_foto_denuncia;
     /** 
@@ -36,8 +36,18 @@ class Denuncia{
      * @Column(type="float")
      */
     public $longitude_denuncia;
+    /**
+     * @var
+     * @Column(type="string", lenght=30)
+     */
+    public $cidade;
+    /**
+     * @var
+     * @Column(type="string", lenght=30)
+     */
+    public $estado;
     /** 
-     * @Column(type="string", length=400)
+     * @Column(type="string", length=40)
      */
     public $data_denuncia;
     /** 
@@ -56,7 +66,7 @@ class Denuncia{
         */
     public $fk_categoria_denuncia;
         /**
-        * @OneToOne(targetEntity="Login", fetch="EAGER")
+        * @ManyToOne(targetEntity="Login", fetch="EAGER")
         * @JoinColumn(name="fk_login_denuncia", referencedColumnName="id_login")
         */
     public $fk_login_denuncia;

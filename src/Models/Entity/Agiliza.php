@@ -3,10 +3,9 @@ namespace App\Models\Entity;
 
 
 /**
-
-* @Entity @Table(name="agiliza")
-
-**/
+ *@Entity
+ *@Table(name="agiliza")
+ **/
 class Agiliza{
     /** 
      * @Id
