@@ -4,8 +4,6 @@
     <list default="true" id="50cf916c-80ea-4e71-ba71-5d0e77411230" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Routes/LoginRoutes.php" afterPath="$PROJECT_DIR$/Routes/LoginRoutes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bootstrap.php" afterPath="$PROJECT_DIR$/bootstrap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,39 +14,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LoginRoutes.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LoginRoutes.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Routes/LoginRoutes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="12" column="35" lean-forward="true" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+            <state relative-caret-position="487">
+              <caret line="32" column="43" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
               <folding>
                 <element signature="e#6#62#0#PHP" expanded="true" />
-                <marker date="1506533634283" expanded="true" signature="516:682" ph="SELECT c, l App" />
-                <marker date="1506533634283" expanded="true" signature="927:1093" ph="SELECT c, l App" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bootstrap.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/bootstrap.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="94" column="77" lean-forward="false" selection-start-line="94" selection-start-column="77" selection-end-line="94" selection-end-column="77" />
-              <folding>
-                <element signature="e#42#71#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-              <folding>
-                <element signature="e#6#62#0#PHP" expanded="true" />
+                <marker date="1506538442778" expanded="true" signature="516:682" ph="SELECT c, l App" />
+                <marker date="1506538442778" expanded="true" signature="927:1093" ph="SELECT c, l App" />
               </folding>
             </state>
           </provider>
@@ -79,8 +53,8 @@
         <option value="$PROJECT_DIR$/Routes/EmpresaRoutes.php" />
         <option value="$PROJECT_DIR$/Routes/DenunciaRoutes.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/Routes/LoginRoutes.php" />
         <option value="$PROJECT_DIR$/bootstrap.php" />
+        <option value="$PROJECT_DIR$/Routes/LoginRoutes.php" />
       </list>
     </option>
   </component>
@@ -192,7 +166,7 @@
       <workItem from="1506475550854" duration="5868000" />
       <workItem from="1506530734553" duration="2895000" />
       <workItem from="1506535115654" duration="598000" />
-      <workItem from="1506537545562" duration="732000" />
+      <workItem from="1506537545562" duration="1115000" />
     </task>
     <task id="LOCAL-00001" summary="Implementação do cadastro de denuncias, foi alterado o tipo de data de denuncia para string(LEMBRAR DE MUDAR NO PHPMYADMIN DO SERVIDOR)">
       <created>1506044073049</created>
@@ -320,11 +294,18 @@
       <option name="project" value="LOCAL" />
       <updated>1506478720130</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Retirado https">
+      <created>1506538280807</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1506538280808</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49857000" />
+    <option name="totallyTimeSpent" value="50240000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -377,7 +358,8 @@
     <MESSAGE value="Adicionado erro de autenticação com o código 401" />
     <MESSAGE value="Adicionado regra que obriga o uso de https, menos no localhost" />
     <MESSAGE value="Retirado https" />
-    <option name="LAST_COMMIT_MESSAGE" value="Retirado https" />
+    <MESSAGE value="Login funcionando" />
+    <option name="LAST_COMMIT_MESSAGE" value="Login funcionando" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -478,8 +460,8 @@
           <caret line="51" column="50" lean-forward="false" selection-start-line="51" selection-start-column="50" selection-end-line="52" selection-end-column="53" />
           <folding>
             <element signature="e#6#62#0#PHP" expanded="true" />
-            <marker date="1506533634283" expanded="true" signature="516:682" ph="SELECT c, l App" />
-            <marker date="1506533634283" expanded="true" signature="927:1093" ph="SELECT c, l App" />
+            <marker date="1506538442778" expanded="true" signature="516:682" ph="SELECT c, l App" />
+            <marker date="1506538442778" expanded="true" signature="927:1093" ph="SELECT c, l App" />
           </folding>
         </state>
       </provider>
@@ -584,8 +566,8 @@
           <caret line="51" column="50" lean-forward="false" selection-start-line="51" selection-start-column="50" selection-end-line="52" selection-end-column="53" />
           <folding>
             <element signature="e#6#62#0#PHP" expanded="true" />
-            <marker date="1506533634283" expanded="true" signature="516:682" ph="SELECT c, l App" />
-            <marker date="1506533634283" expanded="true" signature="927:1093" ph="SELECT c, l App" />
+            <marker date="1506538442778" expanded="true" signature="516:682" ph="SELECT c, l App" />
+            <marker date="1506538442778" expanded="true" signature="927:1093" ph="SELECT c, l App" />
           </folding>
         </state>
       </provider>
@@ -792,14 +774,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Routes/LoginRoutes.php">
+    <entry file="file://$PROJECT_DIR$/bootstrap.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="12" column="35" lean-forward="true" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+        <state relative-caret-position="1598">
+          <caret line="94" column="77" lean-forward="false" selection-start-line="94" selection-start-column="77" selection-end-line="94" selection-end-column="77" />
           <folding>
-            <element signature="e#6#62#0#PHP" expanded="true" />
-            <marker date="1506533634283" expanded="true" signature="516:682" ph="SELECT c, l App" />
-            <marker date="1506533634283" expanded="true" signature="927:1093" ph="SELECT c, l App" />
+            <element signature="e#42#71#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -814,12 +794,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bootstrap.php">
+    <entry file="file://$PROJECT_DIR$/Routes/LoginRoutes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="94" column="77" lean-forward="false" selection-start-line="94" selection-start-column="77" selection-end-line="94" selection-end-column="77" />
+        <state relative-caret-position="487">
+          <caret line="32" column="43" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
           <folding>
-            <element signature="e#42#71#0#PHP" expanded="true" />
+            <element signature="e#6#62#0#PHP" expanded="true" />
+            <marker date="1506538442778" expanded="true" signature="516:682" ph="SELECT c, l App" />
+            <marker date="1506538442778" expanded="true" signature="927:1093" ph="SELECT c, l App" />
           </folding>
         </state>
       </provider>
