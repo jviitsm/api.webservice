@@ -4,7 +4,6 @@
     <list default="true" id="50cf916c-80ea-4e71-ba71-5d0e77411230" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bootstrap.php" afterPath="$PROJECT_DIR$/bootstrap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,8 +17,8 @@
       <file leaf-file-name="bootstrap.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bootstrap.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="95" column="5" lean-forward="false" selection-start-line="95" selection-start-column="5" selection-end-line="95" selection-end-column="5" />
+            <state relative-caret-position="362">
+              <caret line="91" column="28" lean-forward="false" selection-start-line="91" selection-start-column="28" selection-end-line="91" selection-end-column="28" />
               <folding>
                 <element signature="e#42#71#0#PHP" expanded="true" />
               </folding>
@@ -172,7 +171,7 @@
       <workItem from="1506381035471" duration="2307000" />
       <workItem from="1506443204688" duration="271000" />
       <workItem from="1506461924816" duration="2176000" />
-      <workItem from="1506475550854" duration="2338000" />
+      <workItem from="1506475550854" duration="2438000" />
     </task>
     <task id="LOCAL-00001" summary="Implementação do cadastro de denuncias, foi alterado o tipo de data de denuncia para string(LEMBRAR DE MUDAR NO PHPMYADMIN DO SERVIDOR)">
       <created>1506044073049</created>
@@ -279,11 +278,18 @@
       <option name="project" value="LOCAL" />
       <updated>1506476301780</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Erro de autenticação">
+      <created>1506477911800</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1506477911800</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42102000" />
+    <option name="totallyTimeSpent" value="42202000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -332,7 +338,8 @@
     <MESSAGE value="new token" />
     <MESSAGE value="Login refatorado, agora funciona em 1 só método, e verifica se foi por email ou login, funciona para empresa e para cidadao" />
     <MESSAGE value="Login refatorado" />
-    <option name="LAST_COMMIT_MESSAGE" value="Login refatorado" />
+    <MESSAGE value="Erro de autenticação" />
+    <option name="LAST_COMMIT_MESSAGE" value="Erro de autenticação" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -788,8 +795,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bootstrap.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="95" column="5" lean-forward="false" selection-start-line="95" selection-start-column="5" selection-end-line="95" selection-end-column="5" />
+        <state relative-caret-position="362">
+          <caret line="91" column="28" lean-forward="false" selection-start-line="91" selection-start-column="28" selection-end-line="91" selection-end-column="28" />
           <folding>
             <element signature="e#42#71#0#PHP" expanded="true" />
           </folding>

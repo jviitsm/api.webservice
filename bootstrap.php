@@ -88,7 +88,7 @@ $app->add(new \Slim\Middleware\JwtAuthentication([
     "realm" => "Protected",
     "secret" => $container['secretkey'],
     "error" => function ($request, $response, $arguments) {
-        $data["status"] = "error";
+        $data["code"] = "401";
         $data["message"] = $arguments["message"];
         return $response
             ->withHeader("Content-Type", "application/json")
