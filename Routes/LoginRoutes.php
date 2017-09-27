@@ -32,10 +32,10 @@ $app->post('/login', function (Request $request, Response $response) use ($app) 
             if (!$empresa) {
                 throw new Exception("Login ou Senha incorretos", 404);
             } else {
-                $return = $response->withJson($empresa, 200);
+                $return = $response->withJson($empresa, 223);
             }
         } else {
-            $return = $response->withJson($cidadao,200);
+            $return = $response->withJson($cidadao, 222);
         }
         return $return;
     } catch (Exception $ex) {
