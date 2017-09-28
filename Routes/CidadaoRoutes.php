@@ -79,11 +79,7 @@ $app->post('/cidadao/exibir', function(Request $request, Response $response) use
 	}
 	return $return;
 });
-$app->get('/cidadao/testar', function(Request $request, Response $response) use ($app){
 
-    return json_encode(1);
-
-});
 $app->put('/cidadao/alterar', function (Request $request, Response $response) use ($app) {
     if(!$request->getParsedBody()){
         throw new Exception("Corpo de requisição vazio", 204);

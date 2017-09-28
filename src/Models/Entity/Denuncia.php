@@ -38,15 +38,15 @@ class Denuncia{
     public $longitude_denuncia;
     /**
      * @var
-     * @Column(type="string", lenght=30)
+     * @Column(type="string", length=30)
      */
     public $cidade;
     /**
      * @var
-     * @Column(type="string", lenght=30)
+     * @Column(type="string", length=30)
      */
     public $estado;
-    /** 
+    /**
      * @Column(type="string", length=40)
      */
     public $data_denuncia;
@@ -110,10 +110,23 @@ class Denuncia{
         function getFk_login_denuncia(){
             return $this->fk_login_denuncia;
         }
+    function getCidade(){
+        return $this->cidade;
+    }
+    function getEstado(){
+        return $this->estado;
+    }
 
         function setId_denuncia($id_denuncia) {
             $this->id_denuncia = $id_denuncia;
         }
+        function setCidade($cidade) {
+        $this->cidade = $cidade;
+        }
+         function setEstado($estado) {
+        $this->estado = $estado;
+        }
+
 
         function setDescricao_denuncia($descricao_denuncia) {
             $this->descricao_denuncia = $descricao_denuncia;
