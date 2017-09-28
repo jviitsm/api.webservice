@@ -21,14 +21,16 @@ $app->get('/auth', function (Request $request, Response $response) use ($app) {
     $key = $this->get("secretkey");
 
 
-   # $now = new DateTime();
-   # $future = new DateTime("now +1 hour");
+    $now = new DateTime();
+    $future = new DateTime("now +1 hour");
 
 
 
     $token = array(
         "user" => "Root",
         "senha" => "CareCity",
+        "exp" => $future->getTimeStamp(),
+        "ip" => 
 
     );
 
