@@ -37,11 +37,11 @@ $app->post('/login', function (Request $request, Response $response) use ($app) 
             }
             else {
 
-               $return = $response->withJson($empresa)->withStatus(223);
+                $return = $response->withJson($empresa)->withStatus(223);
 
             }
         } else {
-          $return = $response->withJson($cidadao)->withStatus(223);
+            $return = $response->withJson($cidadao)->withStatus(223);
         }
     } catch (Exception $ex) {
         throw new Exception($ex->getMessage(), $ex->getCode());
