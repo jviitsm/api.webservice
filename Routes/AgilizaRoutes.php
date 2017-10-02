@@ -1,6 +1,7 @@
 <?php
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
+use App\Models\Entity\Agiliza;
 
 
 
@@ -11,8 +12,8 @@ $app -> post('/agiliza/cadastrar', function(Request $request, Response $response
     }else{
         $entityManager = $this->get('em');
         try{
-            $fk_login_agiliza = ($request->getParam('fk_login_agiliza'));
-            $fk_denuncia_agiliza = ($request->getParam('fk_denuncia_agiliza'));
+            $fk_login_agiliza = $request->getParam('fk_login_agiliza');
+            $fk_denuncia_agiliza = $request->getParam('fk_denuncia_agiliza');
 
             //Buscando login no banco
             $loginRepository = $entityManager->getRepository('App\Models\Entity\Login');
@@ -32,6 +33,7 @@ $app -> post('/agiliza/cadastrar', function(Request $request, Response $response
 
             $entityManager->persist($agiliza);
             $entityManager->flush();
+
 
             $return = $response->withJson(["result" => true],201)->withHeader('Content-type', 'application/json');
 
