@@ -11,6 +11,7 @@ require 'Routes/EmpresaRoutes.php';
 require 'Routes/LoginRoutes.php';
 require 'Routes/DenunciaRoutes.php';
 require 'Routes/ComentarioRoutes.php';
+require 'Routes/AgilizaRoutes.php';
 
 
 
@@ -38,7 +39,7 @@ $app->get('/auth', function (Request $request, Response $response) use ($app) {
 
     $jwt = JWT::encode($token,$key);
 
-    return $response->withJson(["auth-jwt" => $jwt], 200)
+    return $response->withJson(["token" => $jwt], 200)
         ->withHeader('Content-type', 'application/json');
 
 

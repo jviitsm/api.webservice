@@ -103,8 +103,19 @@ $app->post('/denuncia/cadastrar', function (Request $request, Response $response
         try{
             $id = $request->getParam('id_denuncia');
 
+
+            /*$query =$entityManager->createQuery("SELECT d, c FROM App\Models\Entity\Denuncia d
+             JOIN d.fk_categoria_denuncia c
+             WHERE c = c.id_categoria
+             AND d.id_denuncia = :id")->setParameter(":id", $id);
+
+            $denuncia = $query->getResult();
+                */
+
             $denunciaRepository = $entityManager->getRepository('App\Models\Entity\Denuncia');
             $denuncia = $denunciaRepository->find($id);
+
+            
             $return = $response->withJson($denuncia, 200);
 
         }catch(Exception $ex)
