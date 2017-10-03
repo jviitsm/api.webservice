@@ -45,6 +45,33 @@ $app->get('/auth', function (Request $request, Response $response) use ($app) {
 
 });
 
+$app->post('/imagem/postar', function (Request $request, Response $response) use ($app) {
+
+
+
+    $files=$request->getUploadedFiles();
+    $newimage=$files['Profile_photo'];
+
+
+    if ($newimage->getError() === UPLOAD_ERR_OK) {
+        $uploadFileName = $newimage->getClientFilename();
+        $type = $newimage->getClientMediaType();
+        $name = uniqid('img-' . date('d-m-y-') . '-');
+        $name .= $newimage->getClientFilename();
+      //  $imgs[] = array('url' => '/Photos/' . $name);
+
+        //local server
+     
+        $newimage->moveTo("/home/citycare/Imgs/User/$name");
+
+        //localdev
+        $photoURL = "/servico.projetocitycare.com.br/Imgs/user/$name";
+
+        return $response->withJson($photoURL, 201);
+    }
+
+    });
+
 
 $app->run();
 
