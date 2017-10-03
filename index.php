@@ -56,16 +56,16 @@ $app->post('/imagem/postar', function (Request $request, Response $response) use
     if ($newimage->getError() === UPLOAD_ERR_OK) {
         $uploadFileName = $newimage->getClientFilename();
         $type = $newimage->getClientMediaType();
-        $name = uniqid('img-' . date('d-m-y-') . '-');
+        $name = uniqid('img-' . date('d-m-y') . '-');
         $name .= $newimage->getClientFilename();
       //  $imgs[] = array('url' => '/Photos/' . $name);
 
         //local server
-     
+
         $newimage->moveTo("/home/citycare/Imgs/User/$name");
 
         //localdev
-        $photoURL = "/servico.projetocitycare.com.br/Imgs/user/$name";
+        $photoURL = "/home/citycare/Imgs/User/$name";
 
         return $response->withJson($photoURL, 201);
     }

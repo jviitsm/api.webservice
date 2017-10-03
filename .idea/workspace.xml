@@ -29,8 +29,8 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="63" column="5" lean-forward="false" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
+            <state relative-caret-position="396">
+              <caret line="67" column="22" lean-forward="false" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -199,7 +199,7 @@
       <workItem from="1506906775164" duration="358000" />
       <workItem from="1506909658618" duration="4965000" />
       <workItem from="1506980124668" duration="2633000" />
-      <workItem from="1506995356337" duration="3516000" />
+      <workItem from="1506995356337" duration="3618000" />
     </task>
     <task id="LOCAL-00001" summary="Implementação do cadastro de denuncias, foi alterado o tipo de data de denuncia para string(LEMBRAR DE MUDAR NO PHPMYADMIN DO SERVIDOR)">
       <created>1506044073049</created>
@@ -376,11 +376,18 @@
       <option name="project" value="LOCAL" />
       <updated>1506913715033</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="40% de upload de imagem">
+      <created>1506998902473</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1506998902473</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79349000" />
+    <option name="totallyTimeSpent" value="79451000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -412,7 +419,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implementação de cadastro de comentário, troca de metodo getbody por getparsedbody, exceção de body vazio funcionando!" />
     <MESSAGE value="Implementação do exibir comentario" />
     <MESSAGE value="Alterações de rotas de exibir(de get para post)" />
     <MESSAGE value="Refatoramento" />
@@ -437,7 +443,8 @@
     <MESSAGE value="Token recolhe ip e usuario que logou" />
     <MESSAGE value="Cadastro de Agiliza nao Funciona" />
     <MESSAGE value="Cadastro de Agiliza funcionando" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cadastro de Agiliza funcionando" />
+    <MESSAGE value="40% de upload de imagem" />
+    <option name="LAST_COMMIT_MESSAGE" value="40% de upload de imagem" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -847,8 +854,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="63" column="5" lean-forward="false" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
+        <state relative-caret-position="396">
+          <caret line="67" column="22" lean-forward="false" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="22" />
           <folding />
         </state>
       </provider>
