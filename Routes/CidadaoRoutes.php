@@ -30,6 +30,13 @@ $app -> post('/cidadao/cadastrar', function(Request $request, Response $response
             //pegando login
             $loginCidadao = $loginRepository->find($login->getId_login());
 
+
+
+
+            //Salvar foto de perfil
+
+
+
             //Instância da entidade Cidadao
             $cidadao = new Cidadao();
             //setando valores do objeto cidadao

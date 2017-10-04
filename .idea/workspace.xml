@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="50cf916c-80ea-4e71-ba71-5d0e77411230" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Routes/CidadaoRoutes.php" afterPath="$PROJECT_DIR$/Routes/CidadaoRoutes.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Models/Entity/Cidadao.php" afterPath="$PROJECT_DIR$/src/Models/Entity/Cidadao.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,8 +19,8 @@
       <file leaf-file-name="CidadaoRoutes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Routes/CidadaoRoutes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="13" column="12" lean-forward="false" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+            <state relative-caret-position="158">
+              <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
               <folding>
                 <element signature="e#6#62#0#PHP" expanded="true" />
               </folding>
@@ -29,21 +31,19 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="67" column="22" lean-forward="false" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="22" />
+            <state relative-caret-position="158">
+              <caret line="49" column="40" lean-forward="true" selection-start-line="49" selection-start-column="40" selection-end-line="49" selection-end-column="40" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ComentarioRoutes.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Routes/ComentarioRoutes.php">
+      <file leaf-file-name="Cidadao.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Models/Entity/Cidadao.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="69" column="0" lean-forward="true" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-              <folding>
-                <element signature="e#6#62#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="107">
+              <caret line="76" column="9" lean-forward="false" selection-start-line="76" selection-start-column="9" selection-end-line="76" selection-end-column="9" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -73,8 +73,9 @@
         <option value="$PROJECT_DIR$/bootstrap.php" />
         <option value="$PROJECT_DIR$/src/Models/Entity/Agiliza.php" />
         <option value="$PROJECT_DIR$/Routes/AgilizaRoutes.php" />
-        <option value="$PROJECT_DIR$/Routes/CidadaoRoutes.php" />
         <option value="$PROJECT_DIR$/Routes/ComentarioRoutes.php" />
+        <option value="$PROJECT_DIR$/src/Models/Entity/Cidadao.php" />
+        <option value="$PROJECT_DIR$/Routes/CidadaoRoutes.php" />
         <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
@@ -107,7 +108,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -143,6 +143,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -199,7 +200,8 @@
       <workItem from="1506906775164" duration="358000" />
       <workItem from="1506909658618" duration="4965000" />
       <workItem from="1506980124668" duration="2633000" />
-      <workItem from="1506995356337" duration="3618000" />
+      <workItem from="1506995356337" duration="3697000" />
+      <workItem from="1507080505529" duration="1746000" />
     </task>
     <task id="LOCAL-00001" summary="Implementação do cadastro de denuncias, foi alterado o tipo de data de denuncia para string(LEMBRAR DE MUDAR NO PHPMYADMIN DO SERVIDOR)">
       <created>1506044073049</created>
@@ -383,11 +385,18 @@
       <option name="project" value="LOCAL" />
       <updated>1506998902473</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="40% de upload de imagem">
+      <created>1506998988338</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1506998988338</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79451000" />
+    <option name="totallyTimeSpent" value="81276000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -720,13 +729,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Models/Entity/Cidadao.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-255">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -795,7 +797,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#6#62#0#PHP" expanded="true" />
+            <element signature="e#6#62#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -824,16 +826,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Routes/CidadaoRoutes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="13" column="12" lean-forward="false" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
-          <folding>
-            <element signature="e#6#62#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Models/Entity/Comentario.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -845,7 +837,25 @@
     <entry file="file://$PROJECT_DIR$/Routes/ComentarioRoutes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="464">
-          <caret line="69" column="0" lean-forward="true" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#62#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Models/Entity/Cidadao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="76" column="9" lean-forward="false" selection-start-line="76" selection-start-column="9" selection-end-line="76" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Routes/CidadaoRoutes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
           <folding>
             <element signature="e#6#62#0#PHP" expanded="true" />
           </folding>
@@ -854,8 +864,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="67" column="22" lean-forward="false" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="22" />
+        <state relative-caret-position="158">
+          <caret line="49" column="40" lean-forward="true" selection-start-line="49" selection-start-column="40" selection-end-line="49" selection-end-column="40" />
           <folding />
         </state>
       </provider>

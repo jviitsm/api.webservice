@@ -45,13 +45,10 @@ $app->get('/auth', function (Request $request, Response $response) use ($app) {
 
 });
 
-$app->post('/imagem/postar', function (Request $request, Response $response) use ($app) {
-
-
+$app->post('/imagem/user', function (Request $request, Response $response) use ($app) {
 
     $files=$request->getUploadedFiles();
     $newimage=$files['Profile_photo'];
-
 
     if ($newimage->getError() === UPLOAD_ERR_OK) {
         $uploadFileName = $newimage->getClientFilename();

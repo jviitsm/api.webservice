@@ -75,7 +75,6 @@ class Cidadao{
         function getCidade() {
             return $this->cidade;
         }
-
         function getDir_foto_usuario() {
             return $this->dir_foto_usuario;
         }
