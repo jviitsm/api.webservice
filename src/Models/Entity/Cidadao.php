@@ -19,17 +19,17 @@ class Cidadao{
      /** 
      * @var string
      * @Column(type="string", length=100)
-     */     
+     */
 	public $nome;
      /** 
      * @var string
      * @Column(type="string", nullable=true, length=100)
-     */     
+     */
 	public $sobrenome;
     /** 
      * @var string
      * @Column(type="string", length=10)
-     */     
+     */
 	public $sexo;
      /** 
      * @var string
@@ -39,12 +39,12 @@ class Cidadao{
      /** 
      * @var string
      * @Column(type="string", length=30)
-     */     
+     */
 	public $cidade;
      /** 
      * @var string
      * @Column(type="string", length=200)
-     */     
+     */
 	public $dir_foto_usuario;
     /**
     * @OneToOne(targetEntity="Login", fetch="EAGER")

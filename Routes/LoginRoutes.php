@@ -13,7 +13,7 @@ $app->post('/login', function (Request $request, Response $response) use ($app) 
         throw new Exception("Corpo de requisição vazio", 204);
     } else {
         $entityManager = $this->get('em');
-        $senhaParametro = $request->getParam('senha');
+        $senhaParametro = base64_encode($request->getParam('senha'));
         $loginParametro = $request->getParam('login');
         try {
             //login por cidadao

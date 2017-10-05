@@ -22,7 +22,7 @@ $app -> post('/empresa/cadastrar', function(Request $request, Response $response
             //setando valores do objeto login
             $login ->setLogin($fk_login_empresa['login']);
             $login ->setEmail($fk_login_empresa['email']);
-            $login ->setSenha($fk_login_empresa['senha']);
+            $login ->setSenha(base64_encode(fk_login_empresa['senha']));
             $login ->setStatus_login($fk_login_empresa['status_login']);
             $login ->setAsAdministrador($fk_login_empresa['administrador']);
             //salvando login
@@ -125,7 +125,7 @@ $app->put('/empresa/alterar', function(Request $request, Response $response) use
         $login ->setId_login($fk_login_empresa['id_login']);
         $login ->setLogin(fk_login_empresa['login']);
         $login ->setEmail(fk_login_empresa['email']);
-        $login ->setSenha(fk_login_empresa['senha']);
+        $login ->setSenha(base64_encode(fk_login_empresa['senha']));
         $login ->setStatus_login(fk_login_empresa['status_login']);
         $login ->setAsAdministrador(fk_login_empresa['administrador']);
         //salvando login
