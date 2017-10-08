@@ -30,6 +30,7 @@ $container['errorHandler'] = function ($c){
 
 $isDevMode = true;
 
+
 //Diretório das Entidades e Metadata do Doctrine
 $config = Setup::createAnnotationMetadataConfiguration(array(__DIR__."/src/Models/Entity"), $isDevMode);
 

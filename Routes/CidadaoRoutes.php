@@ -74,6 +74,7 @@ $app->post('/cidadao/exibir', function(Request $request, Response $response) use
 
         $cidadao = $entityManager->find('App\Models\Entity\Cidadao', $id);
 
+
 		if(!$cidadao){
             throw new Exception("Cidadão não encontrado", 404);
         }

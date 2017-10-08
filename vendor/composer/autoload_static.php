@@ -30,6 +30,7 @@ class ComposerStaticInit313294889bd446a244c7f4341626cb9f
             'Psr\\Http\\Message\\' => 17,
             'Psr\\Container\\' => 14,
             'Psr7Middlewares\\' => 16,
+            'PHPMailer\\PHPMailer\\' => 20,
         ),
         'I' => 
         array (
@@ -94,6 +95,10 @@ class ComposerStaticInit313294889bd446a244c7f4341626cb9f
         'Psr7Middlewares\\' => 
         array (
             0 => __DIR__ . '/..' . '/oscarotero/psr7-middlewares/src',
+        ),
+        'PHPMailer\\PHPMailer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
         ),
         'Interop\\Container\\' => 
         array (
