@@ -104,23 +104,35 @@ $app->post('/denuncia/cadastrar', function (Request $request, Response $response
             $id = $request->getParam('id_denuncia');
 
 
-            /*$query =$entityManager->createQuery("SELECT d, c FROM App\Models\Entity\Denuncia d
-             JOIN d.fk_categoria_denuncia c
-             WHERE c = c.id_categoria
-             AND d.id_denuncia = :id")->setParameter(":id", $id);
-
-            $denuncia = $query->getResult();
-                */
-
             $denunciaRepository = $entityManager->getRepository('App\Models\Entity\Denuncia');
             $denuncia = $denunciaRepository->find($id);
 
-            
-            $return = $response->withJson($denuncia, 200);
+            $queryAgiliza = $entityManager->createQuery("SELECT (a.fk_login_agiliza) FROM App\Models\Entity\Agiliza a
+          where a.fk_denuncia_agiliza = :id");
+            $queryAgiliza->setParameters(
+                array(':id' => $id));
+
+
+            $queryComentario  = $entityManager->createQuery("SELECT (c.fk_login_comentario),(c.descricao_comentario)
+            FROM App\Models\Entity\Comentario c
+             where c.fk_denuncia_comentario = :id");
+            $queryComentario->setParameters(
+                array(':id' => $id));
+
+            $agiliza =$queryAgiliza->getResult();
+            $comentario = $queryComentario->getResult();
+
+
+
+            $retorno = array (
+                "denuncia" => $denuncia,
+                "agiliza" => $agiliza,
+                "comentario" => $comentario
+            );
 
         }catch(Exception $ex)
         {
             throw new Exception($ex->getMessage(), $ex->getCode());
-        } return $return;
+        } return json_encode($retorno);
 
     });

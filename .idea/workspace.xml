@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="50cf916c-80ea-4e71-ba71-5d0e77411230" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Routes/CidadaoRoutes.php" afterPath="$PROJECT_DIR$/Routes/CidadaoRoutes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Routes/EmpresaRoutes.php" afterPath="$PROJECT_DIR$/Routes/EmpresaRoutes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Models/Entity/Login.php" afterPath="$PROJECT_DIR$/src/Models/Entity/Login.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Routes/DenunciaRoutes.php" afterPath="$PROJECT_DIR$/Routes/DenunciaRoutes.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,14 +14,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CidadaoRoutes.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Routes/CidadaoRoutes.php">
+      <file leaf-file-name="AgilizaRoutes.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Routes/AgilizaRoutes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="104" column="52" lean-forward="false" selection-start-line="104" selection-start-column="52" selection-end-line="104" selection-end-column="52" />
-              <folding>
-                <element signature="e#6#62#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="238">
+              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -33,7 +28,7 @@
         <entry file="file://$PROJECT_DIR$/Routes/LoginRoutes.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="15" column="26" lean-forward="true" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="39" />
+              <caret line="14" column="42" lean-forward="true" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
               <folding>
                 <element signature="e#6#62#0#PHP" expanded="true" />
                 <marker date="1507424137616" expanded="true" signature="661:807" ph="SELECT c, l App" />
@@ -45,13 +40,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
+      <file leaf-file-name="DenunciaRoutes.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Routes/DenunciaRoutes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="92" column="35" lean-forward="false" selection-start-line="92" selection-start-column="35" selection-end-line="92" selection-end-column="35" />
+            <state relative-caret-position="260">
+              <caret line="115" column="71" lean-forward="false" selection-start-line="115" selection-start-column="71" selection-end-line="115" selection-end-column="71" />
               <folding>
-                <element signature="e#7#63#0#PHP" expanded="true" />
+                <marker date="1507426070014" expanded="true" signature="4815:4919" ph="SELECT (a.fk... App" />
+                <marker date="1507426070014" expanded="true" signature="5066:5219" ph="SELECT (c.fk... App" />
+                <marker date="1507426070014" expanded="true" signature="5066:5415" ph="SELECT (c.fk... ${$agiliza}" />
               </folding>
             </state>
           </provider>
@@ -76,9 +73,7 @@
         <option value="$PROJECT_DIR$/src/Models/Entity/Categoria.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/src/Models/Entity/Denuncia.php" />
-        <option value="$PROJECT_DIR$/Routes/DenunciaRoutes.php" />
         <option value="$PROJECT_DIR$/src/Models/Entity/Agiliza.php" />
-        <option value="$PROJECT_DIR$/Routes/AgilizaRoutes.php" />
         <option value="$PROJECT_DIR$/Routes/ComentarioRoutes.php" />
         <option value="$PROJECT_DIR$/src/Models/Entity/Cidadao.php" />
         <option value="$PROJECT_DIR$/vendor/lostAccount.php" />
@@ -95,6 +90,8 @@
         <option value="$PROJECT_DIR$/Routes/LoginRoutes.php" />
         <option value="$PROJECT_DIR$/Routes/CidadaoRoutes.php" />
         <option value="$PROJECT_DIR$/Routes/EmpresaRoutes.php" />
+        <option value="$PROJECT_DIR$/Routes/AgilizaRoutes.php" />
+        <option value="$PROJECT_DIR$/Routes/DenunciaRoutes.php" />
       </list>
     </option>
   </component>
@@ -229,7 +226,7 @@
       <workItem from="1507080505529" duration="1790000" />
       <workItem from="1507240745675" duration="2338000" />
       <workItem from="1507316185157" duration="663000" />
-      <workItem from="1507418609390" duration="5836000" />
+      <workItem from="1507418609390" duration="7343000" />
     </task>
     <task id="LOCAL-00001" summary="Implementação do cadastro de denuncias, foi alterado o tipo de data de denuncia para string(LEMBRAR DE MUDAR NO PHPMYADMIN DO SERVIDOR)">
       <created>1506044073049</created>
@@ -441,11 +438,18 @@
       <option name="project" value="LOCAL" />
       <updated>1507423946600</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Refatoramento">
+      <created>1507424468234</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1507424468234</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90157000" />
+    <option name="totallyTimeSpent" value="91664000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -477,7 +481,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Refatoramento" />
     <MESSAGE value="Implementado o middleware psr7-middlewares, que cuida do erro 404 quando uma / é colocada dps da url." />
     <MESSAGE value="Adicionada a biblioteca tuupola/slim-basic-auth para autenticação básica" />
     <MESSAGE value="Adicionada a biblioteca firebase/php-jwt" />
@@ -502,7 +505,8 @@
     <MESSAGE value="40% de upload de imagem" />
     <MESSAGE value="Cadastro de empresa e cidadao/login com criptografia de senha base64" />
     <MESSAGE value="Implementado a rota para recuperar senha por e-mail" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implementado a rota para recuperar senha por e-mail" />
+    <MESSAGE value="Refatoramento" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refatoramento" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -677,8 +681,9 @@
         <state relative-caret-position="340">
           <caret line="25" column="100" lean-forward="false" selection-start-line="25" selection-start-column="99" selection-end-line="25" selection-end-column="100" />
           <folding>
-            <element signature="e#10#66#0#PHP" expanded="false" />
-            <marker date="1506784017634" expanded="true" signature="4657:4821" ph="SELECT d, c App" />
+            <marker date="1507426070014" expanded="true" signature="4815:4919" ph="SELECT (a.fk... App" />
+            <marker date="1507426070014" expanded="true" signature="5066:5219" ph="SELECT (c.fk... App" />
+            <marker date="1507426070014" expanded="true" signature="5066:5415" ph="SELECT (c.fk... ${$agiliza}" />
           </folding>
         </state>
       </provider>
@@ -702,8 +707,9 @@
         <state relative-caret-position="459">
           <caret line="32" column="47" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="48" selection-end-column="3" />
           <folding>
-            <element signature="e#10#66#0#PHP" expanded="false" />
-            <marker date="1506784017634" expanded="true" signature="4657:4821" ph="SELECT d, c App" />
+            <marker date="1507426070014" expanded="true" signature="4815:4919" ph="SELECT (a.fk... App" />
+            <marker date="1507426070014" expanded="true" signature="5066:5219" ph="SELECT (c.fk... App" />
+            <marker date="1507426070014" expanded="true" signature="5066:5415" ph="SELECT (c.fk... ${$agiliza}" />
           </folding>
         </state>
       </provider>
@@ -766,17 +772,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Routes/DenunciaRoutes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="31" column="85" lean-forward="true" selection-start-line="31" selection-start-column="85" selection-end-line="31" selection-end-column="85" />
-          <folding>
-            <element signature="e#10#66#0#PHP" expanded="false" />
-            <marker date="1506784017634" expanded="true" signature="4657:4821" ph="SELECT d, c App" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/Core/Core_c.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -785,31 +780,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Routes/AgilizaRoutes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#6#62#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Models/Entity/Comentario.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="22" column="16" lean-forward="false" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="16" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Routes/ComentarioRoutes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-          <folding>
-            <element signature="e#6#62#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -877,33 +852,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Models/Entity/Login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="81" column="42" lean-forward="false" selection-start-line="81" selection-start-column="42" selection-end-line="81" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Routes/LoginRoutes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="15" column="26" lean-forward="true" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="39" />
-          <folding>
-            <element signature="e#6#62#0#PHP" expanded="true" />
-            <marker date="1507424137616" expanded="true" signature="661:807" ph="SELECT c, l App" />
-            <marker date="1507424137616" expanded="true" signature="1214:1360" ph="SELECT c, l App" />
-            <marker date="1507424137616" expanded="true" signature="1803:1949" ph="SELECT c, l App" />
-            <marker date="1507424137616" expanded="true" signature="2427:2573" ph="SELECT c, l App" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Routes/EmpresaRoutes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="129" column="37" lean-forward="false" selection-start-line="129" selection-start-column="37" selection-end-line="129" selection-end-column="37" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Routes/CidadaoRoutes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="104" column="52" lean-forward="false" selection-start-line="104" selection-start-column="52" selection-end-line="104" selection-end-column="52" />
+          <folding>
+            <element signature="e#6#62#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -917,12 +880,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Routes/CidadaoRoutes.php">
+    <entry file="file://$PROJECT_DIR$/Routes/ComentarioRoutes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="104" column="52" lean-forward="false" selection-start-line="104" selection-start-column="52" selection-end-line="104" selection-end-column="52" />
+        <state relative-caret-position="464">
+          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Models/Entity/Login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="538">
+          <caret line="81" column="42" lean-forward="false" selection-start-line="81" selection-start-column="42" selection-end-line="81" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Routes/AgilizaRoutes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Routes/LoginRoutes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="14" column="42" lean-forward="true" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
           <folding>
             <element signature="e#6#62#0#PHP" expanded="true" />
+            <marker date="1507424137616" expanded="true" signature="661:807" ph="SELECT c, l App" />
+            <marker date="1507424137616" expanded="true" signature="1214:1360" ph="SELECT c, l App" />
+            <marker date="1507424137616" expanded="true" signature="1803:1949" ph="SELECT c, l App" />
+            <marker date="1507424137616" expanded="true" signature="2427:2573" ph="SELECT c, l App" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Routes/DenunciaRoutes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="115" column="71" lean-forward="false" selection-start-line="115" selection-start-column="71" selection-end-line="115" selection-end-column="71" />
+          <folding>
+            <marker date="1507426070014" expanded="true" signature="4815:4919" ph="SELECT (a.fk... App" />
+            <marker date="1507426070014" expanded="true" signature="5066:5219" ph="SELECT (c.fk... App" />
+            <marker date="1507426070014" expanded="true" signature="5066:5415" ph="SELECT (c.fk... ${$agiliza}" />
           </folding>
         </state>
       </provider>
