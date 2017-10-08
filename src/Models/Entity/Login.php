@@ -79,7 +79,7 @@ class Login {
     }
 
     function getSenha() {
-        return $this->senha;
+        return base64_decode($this->senha);
     }
 
     function getStatus_login() {
@@ -103,7 +103,7 @@ class Login {
     }
 
     function setSenha($senha) {
-        $this->senha = $senha;
+        $this->senha = base64_encode($senha);
     }
 
     function setStatus_login($status_login) {

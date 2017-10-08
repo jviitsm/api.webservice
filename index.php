@@ -71,14 +71,12 @@ $app->post('/imagem/user', function (Request $request, Response $response) use (
 
 });
 
-
 $app->post('/email', function (Request $request, Response $response) use ($app) {
 
          $entityManager = $this->get('em');
 
         //Atributos
         $id = $request->getParam('id_login');
-
 
         //Buscar login
         $loginRepository = $entityManager->getRepository('App\Models\Entity\Login');
@@ -87,13 +85,12 @@ $app->post('/email', function (Request $request, Response $response) use ($app) 
         //Buscar email no login
         $email =  $login->getEmail();
 
-
         //Gerar senha randomica
         $chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
         $novaSenha =  substr(str_shuffle($chars),0,8);
 
         //Criptografar senha randomica
-        $login->setSenha(base64_encode($novaSenha));
+        $login->setSenha($novaSenha);
 
         //Salvar nova senha no banco
         $entityManager->merge($login);
@@ -122,7 +119,7 @@ $app->post('/email', function (Request $request, Response $response) use ($app) 
             $return = $response->withJson(1, 201);
         }
     return $return;
-
     });
+
 $app->run();
 

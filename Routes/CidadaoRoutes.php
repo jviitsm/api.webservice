@@ -19,7 +19,7 @@ $app -> post('/cidadao/cadastrar', function(Request $request, Response $response
             //setando valores do objeto login
             $login ->setLogin($fk_login_cidadao['login']);
             $login ->setEmail($fk_login_cidadao['email']);
-            $login ->setSenha(base64_encode($fk_login_cidadao['senha']));
+            $login ->setSenha($fk_login_cidadao['senha']);
             $login ->setStatus_login($fk_login_cidadao['status_login']);
             $login ->setAsAdministrador($fk_login_cidadao['administrador']);
             //salvando login
@@ -102,7 +102,7 @@ $app->put('/cidadao/alterar', function (Request $request, Response $response) us
 		$login ->setId_login($fk_login_cidadao['id_login']);
 		$login ->setLogin($fk_login_cidadao['login']);
 		$login ->setEmail($fk_login_cidadao['email']);
-		$login ->setSenha(base64_encode($fk_login_cidadao['senha']));
+		$login ->setSenha($fk_login_cidadao['senha']);
 		$login ->setStatus_login($fk_login_cidadao['status_login']);
 		$login ->setAsAdministrador($fk_login_cidadao['administrador']);
 						//salvando login       
