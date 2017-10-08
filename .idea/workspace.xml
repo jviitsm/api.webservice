@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="50cf916c-80ea-4e71-ba71-5d0e77411230" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Routes/DenunciaRoutes.php" afterPath="$PROJECT_DIR$/Routes/DenunciaRoutes.php" />
-    </list>
+    <list default="true" id="50cf916c-80ea-4e71-ba71-5d0e77411230" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -102,7 +99,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="5" />
     <option name="y" value="2" />
     <option name="width" value="697" />
@@ -226,7 +223,7 @@
       <workItem from="1507080505529" duration="1790000" />
       <workItem from="1507240745675" duration="2338000" />
       <workItem from="1507316185157" duration="663000" />
-      <workItem from="1507418609390" duration="7343000" />
+      <workItem from="1507418609390" duration="7403000" />
     </task>
     <task id="LOCAL-00001" summary="Implementação do cadastro de denuncias, foi alterado o tipo de data de denuncia para string(LEMBRAR DE MUDAR NO PHPMYADMIN DO SERVIDOR)">
       <created>1506044073049</created>
@@ -445,14 +442,21 @@
       <option name="project" value="LOCAL" />
       <updated>1507424468234</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Refatoramento">
+      <created>1507426086268</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1507426086268</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91664000" />
+    <option name="totallyTimeSpent" value="91724000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17203514" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
