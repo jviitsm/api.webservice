@@ -107,13 +107,13 @@ $app->post('/denuncia/cadastrar', function (Request $request, Response $response
             $denunciaRepository = $entityManager->getRepository('App\Models\Entity\Denuncia');
             $denuncia = $denunciaRepository->find($id);
 
-            $queryAgiliza = $entityManager->createQuery("SELECT (a.fk_login_agiliza) FROM App\Models\Entity\Agiliza a
+            $queryAgiliza = $entityManager->createQuery("SELECT (a.fk_login_agiliza)id_login, (a.interacao)interacao FROM App\Models\Entity\Agiliza a
           where a.fk_denuncia_agiliza = :id");
             $queryAgiliza->setParameters(
                 array(':id' => $id));
 
 
-            $queryComentario  = $entityManager->createQuery("SELECT (c.fk_login_comentario),(c.descricao_comentario)
+            $queryComentario  = $entityManager->createQuery("SELECT (c.fk_login_comentario)id_login,(c.descricao_comentario)descricao
             FROM App\Models\Entity\Comentario c
              where c.fk_denuncia_comentario = :id");
             $queryComentario->setParameters(

@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="50cf916c-80ea-4e71-ba71-5d0e77411230" name="Default" comment="" />
+    <list default="true" id="50cf916c-80ea-4e71-ba71-5d0e77411230" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Routes/DenunciaRoutes.php" afterPath="$PROJECT_DIR$/Routes/DenunciaRoutes.php" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,11 +44,11 @@
         <entry file="file://$PROJECT_DIR$/Routes/DenunciaRoutes.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="260">
-              <caret line="115" column="71" lean-forward="false" selection-start-line="115" selection-start-column="71" selection-end-line="115" selection-end-column="71" />
+              <caret line="115" column="133" lean-forward="false" selection-start-line="115" selection-start-column="133" selection-end-line="115" selection-end-column="133" />
               <folding>
-                <marker date="1507426070014" expanded="true" signature="4815:4919" ph="SELECT (a.fk... App" />
-                <marker date="1507426070014" expanded="true" signature="5066:5219" ph="SELECT (c.fk... App" />
-                <marker date="1507426070014" expanded="true" signature="5066:5415" ph="SELECT (c.fk... ${$agiliza}" />
+                <marker date="1507426282882" expanded="true" signature="4815:4951" ph="SELECT (a.fk... App" />
+                <marker date="1507426282882" expanded="true" signature="5098:5268" ph="SELECT (c.fk... App" />
+                <marker date="1507426282882" expanded="true" signature="5098:5464" ph="SELECT (c.fk... ${$agiliza}" />
               </folding>
             </state>
           </provider>
@@ -99,7 +102,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="5" />
     <option name="y" value="2" />
     <option name="width" value="697" />
@@ -223,7 +226,7 @@
       <workItem from="1507080505529" duration="1790000" />
       <workItem from="1507240745675" duration="2338000" />
       <workItem from="1507316185157" duration="663000" />
-      <workItem from="1507418609390" duration="7403000" />
+      <workItem from="1507418609390" duration="7571000" />
     </task>
     <task id="LOCAL-00001" summary="Implementação do cadastro de denuncias, foi alterado o tipo de data de denuncia para string(LEMBRAR DE MUDAR NO PHPMYADMIN DO SERVIDOR)">
       <created>1506044073049</created>
@@ -453,10 +456,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91724000" />
+    <option name="totallyTimeSpent" value="91892000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17203514" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -485,7 +488,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implementado o middleware psr7-middlewares, que cuida do erro 404 quando uma / é colocada dps da url." />
     <MESSAGE value="Adicionada a biblioteca tuupola/slim-basic-auth para autenticação básica" />
     <MESSAGE value="Adicionada a biblioteca firebase/php-jwt" />
     <MESSAGE value="remoção de bibliotecas de autenticação" />
@@ -510,7 +512,8 @@
     <MESSAGE value="Cadastro de empresa e cidadao/login com criptografia de senha base64" />
     <MESSAGE value="Implementado a rota para recuperar senha por e-mail" />
     <MESSAGE value="Refatoramento" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refatoramento" />
+    <MESSAGE value="Refatoramento na exibição da denuncia" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refatoramento na exibição da denuncia" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -685,9 +688,9 @@
         <state relative-caret-position="340">
           <caret line="25" column="100" lean-forward="false" selection-start-line="25" selection-start-column="99" selection-end-line="25" selection-end-column="100" />
           <folding>
-            <marker date="1507426070014" expanded="true" signature="4815:4919" ph="SELECT (a.fk... App" />
-            <marker date="1507426070014" expanded="true" signature="5066:5219" ph="SELECT (c.fk... App" />
-            <marker date="1507426070014" expanded="true" signature="5066:5415" ph="SELECT (c.fk... ${$agiliza}" />
+            <marker date="1507426282882" expanded="true" signature="4815:4951" ph="SELECT (a.fk... App" />
+            <marker date="1507426282882" expanded="true" signature="5098:5268" ph="SELECT (c.fk... App" />
+            <marker date="1507426282882" expanded="true" signature="5098:5464" ph="SELECT (c.fk... ${$agiliza}" />
           </folding>
         </state>
       </provider>
@@ -711,9 +714,9 @@
         <state relative-caret-position="459">
           <caret line="32" column="47" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="48" selection-end-column="3" />
           <folding>
-            <marker date="1507426070014" expanded="true" signature="4815:4919" ph="SELECT (a.fk... App" />
-            <marker date="1507426070014" expanded="true" signature="5066:5219" ph="SELECT (c.fk... App" />
-            <marker date="1507426070014" expanded="true" signature="5066:5415" ph="SELECT (c.fk... ${$agiliza}" />
+            <marker date="1507426282882" expanded="true" signature="4815:4951" ph="SELECT (a.fk... App" />
+            <marker date="1507426282882" expanded="true" signature="5098:5268" ph="SELECT (c.fk... App" />
+            <marker date="1507426282882" expanded="true" signature="5098:5464" ph="SELECT (c.fk... ${$agiliza}" />
           </folding>
         </state>
       </provider>
@@ -925,11 +928,11 @@
     <entry file="file://$PROJECT_DIR$/Routes/DenunciaRoutes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
-          <caret line="115" column="71" lean-forward="false" selection-start-line="115" selection-start-column="71" selection-end-line="115" selection-end-column="71" />
+          <caret line="115" column="133" lean-forward="false" selection-start-line="115" selection-start-column="133" selection-end-line="115" selection-end-column="133" />
           <folding>
-            <marker date="1507426070014" expanded="true" signature="4815:4919" ph="SELECT (a.fk... App" />
-            <marker date="1507426070014" expanded="true" signature="5066:5219" ph="SELECT (c.fk... App" />
-            <marker date="1507426070014" expanded="true" signature="5066:5415" ph="SELECT (c.fk... ${$agiliza}" />
+            <marker date="1507426282882" expanded="true" signature="4815:4951" ph="SELECT (a.fk... App" />
+            <marker date="1507426282882" expanded="true" signature="5098:5268" ph="SELECT (c.fk... App" />
+            <marker date="1507426282882" expanded="true" signature="5098:5464" ph="SELECT (c.fk... ${$agiliza}" />
           </folding>
         </state>
       </provider>
