@@ -31,11 +31,25 @@ $app -> post('/cidadao/cadastrar', function(Request $request, Response $response
             $loginCidadao = $loginRepository->find($login->getId_login());
 
 
+            //Salvar foto
+            $files = $request->getUploadedFiles();
+            $newimage = $files['foto'];
 
+            if ($newimage->getError() === UPLOAD_ERR_OK) {
+                $uploadFileName = $newimage->getClientFilename();
+                $type = $newimage->getClientMediaType();
+                $name = uniqid('img-' . date('d-m-y') . '-');
+                $name .= $newimage->getClientFilename();
+                //  $imgs[] = array('url' => '/Photos/' . $name);
 
-            //Salvar foto de perfil
+                //local server
 
+                $newimage->moveTo("/home/citycare/public_html/Imgs/user/$name");#/home/citycare/Imgs/User/$name
 
+                //localdev
+                $photoURL = "/home/citycare/public_html/Imgs/user/$name";#/home/citycare/Imgs/User/$name
+
+            }
 
             //Instância da entidade Cidadao
             $cidadao = new Cidadao();
@@ -46,7 +60,7 @@ $app -> post('/cidadao/cadastrar', function(Request $request, Response $response
             $cidadao ->setSobrenome($request->getParam('sobrenome'));
             $cidadao ->setEstado($request->getParam('estado'));
             $cidadao ->setCidade($request->getParam('cidade'));
-            $cidadao ->setDir_foto_usuario($request->getParam('dir_foto_usuario'));
+            $cidadao ->setDir_foto_usuario($request->getParam($photoURL));
             $entityManager->persist($cidadao);
             $entityManager->flush();
             //retornando confirmação do evento completo
