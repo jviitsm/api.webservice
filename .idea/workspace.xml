@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="50cf916c-80ea-4e71-ba71-5d0e77411230" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Routes/CidadaoRoutes.php" afterPath="$PROJECT_DIR$/Routes/CidadaoRoutes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Routes/LoginRoutes.php" afterPath="$PROJECT_DIR$/Routes/LoginRoutes.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,13 +14,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CidadaoRoutes.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CidadaoRoutes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Routes/CidadaoRoutes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
+            <state relative-caret-position="192">
               <caret line="42" column="45" lean-forward="true" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
               <folding>
                 <element signature="e#6#62#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DenunciaRoutes.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Routes/DenunciaRoutes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1717">
+              <caret line="115" column="133" lean-forward="false" selection-start-line="115" selection-start-column="133" selection-end-line="115" selection-end-column="133" />
+              <folding>
+                <marker date="1507426282882" expanded="true" signature="4815:4951" ph="SELECT (a.fk... App" />
+                <marker date="1507426282882" expanded="true" signature="5098:5268" ph="SELECT (c.fk... App" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginRoutes.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Routes/LoginRoutes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="56" column="76" lean-forward="false" selection-start-line="56" selection-start-column="76" selection-end-line="56" selection-end-column="76" />
+              <folding>
+                <marker date="1508032295797" expanded="true" signature="661:807" ph="SELECT c, l App" />
+                <marker date="1508032295797" expanded="true" signature="1217:1363" ph="SELECT c, l App" />
+                <marker date="1508032295797" expanded="true" signature="1809:1955" ph="SELECT c, l App" />
+                <marker date="1508032295797" expanded="true" signature="2436:2582" ph="SELECT c, l App" />
               </folding>
             </state>
           </provider>
@@ -67,7 +95,6 @@
         <option value="$PROJECT_DIR$/bootstrap.php" />
         <option value="$PROJECT_DIR$/src/Models/Entity/Password.php" />
         <option value="$PROJECT_DIR$/src/Models/Entity/Login.php" />
-        <option value="$PROJECT_DIR$/Routes/LoginRoutes.php" />
         <option value="$PROJECT_DIR$/Routes/EmpresaRoutes.php" />
         <option value="$PROJECT_DIR$/Routes/AgilizaRoutes.php" />
         <option value="$PROJECT_DIR$/Routes/DenunciaRoutes.php" />
@@ -75,6 +102,7 @@
         <option value="$PROJECT_DIR$/src/Models/Entity/Email.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/Routes/CidadaoRoutes.php" />
+        <option value="$PROJECT_DIR$/Routes/LoginRoutes.php" />
       </list>
     </option>
   </component>
@@ -220,7 +248,7 @@
       <workItem from="1507676965564" duration="640000" />
       <workItem from="1507679964937" duration="2207000" />
       <workItem from="1507683297652" duration="11101000" />
-      <workItem from="1508031998383" duration="208000" />
+      <workItem from="1508031998383" duration="307000" />
     </task>
     <task id="LOCAL-00001" summary="Implementação do cadastro de denuncias, foi alterado o tipo de data de denuncia para string(LEMBRAR DE MUDAR NO PHPMYADMIN DO SERVIDOR)">
       <created>1506044073049</created>
@@ -467,11 +495,18 @@
       <option name="project" value="LOCAL" />
       <updated>1508032041492</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Testar cadastro de imagem junto com cadastro de cidadao">
+      <created>1508032217187</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1508032217187</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113115000" />
+    <option name="totallyTimeSpent" value="113214000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -503,7 +538,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Adicionada a biblioteca firebase/php-jwt" />
     <MESSAGE value="remoção de bibliotecas de autenticação" />
     <MESSAGE value="Adição das bibliotecas adicionadas anteriormente" />
     <MESSAGE value="Atualização da geração do token" />
@@ -528,7 +562,8 @@
     <MESSAGE value="Refatoramento" />
     <MESSAGE value="Refatoramento na exibição da denuncia" />
     <MESSAGE value="Testar cadastro de imagem junto com cadastro de cidadao" />
-    <option name="LAST_COMMIT_MESSAGE" value="Testar cadastro de imagem junto com cadastro de cidadao" />
+    <MESSAGE value="Refatoramento no login" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refatoramento no login" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -556,11 +591,10 @@
         <state relative-caret-position="850">
           <caret line="51" column="50" lean-forward="false" selection-start-line="51" selection-start-column="50" selection-end-line="52" selection-end-column="53" />
           <folding>
-            <element signature="e#6#62#0#PHP" expanded="false" />
-            <marker date="1507424137616" expanded="true" signature="661:807" ph="SELECT c, l App" />
-            <marker date="1507424137616" expanded="true" signature="1214:1360" ph="SELECT c, l App" />
-            <marker date="1507424137616" expanded="true" signature="1803:1949" ph="SELECT c, l App" />
-            <marker date="1507424137616" expanded="true" signature="2427:2573" ph="SELECT c, l App" />
+            <marker date="1508032295797" expanded="true" signature="661:807" ph="SELECT c, l App" />
+            <marker date="1508032295797" expanded="true" signature="1217:1363" ph="SELECT c, l App" />
+            <marker date="1508032295797" expanded="true" signature="1809:1955" ph="SELECT c, l App" />
+            <marker date="1508032295797" expanded="true" signature="2436:2582" ph="SELECT c, l App" />
           </folding>
         </state>
       </provider>
@@ -635,11 +669,10 @@
         <state relative-caret-position="850">
           <caret line="51" column="50" lean-forward="false" selection-start-line="51" selection-start-column="50" selection-end-line="52" selection-end-column="53" />
           <folding>
-            <element signature="e#6#62#0#PHP" expanded="false" />
-            <marker date="1507424137616" expanded="true" signature="661:807" ph="SELECT c, l App" />
-            <marker date="1507424137616" expanded="true" signature="1214:1360" ph="SELECT c, l App" />
-            <marker date="1507424137616" expanded="true" signature="1803:1949" ph="SELECT c, l App" />
-            <marker date="1507424137616" expanded="true" signature="2427:2573" ph="SELECT c, l App" />
+            <marker date="1508032295797" expanded="true" signature="661:807" ph="SELECT c, l App" />
+            <marker date="1508032295797" expanded="true" signature="1217:1363" ph="SELECT c, l App" />
+            <marker date="1508032295797" expanded="true" signature="1809:1955" ph="SELECT c, l App" />
+            <marker date="1508032295797" expanded="true" signature="2436:2582" ph="SELECT c, l App" />
           </folding>
         </state>
       </provider>
@@ -828,31 +861,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Routes/LoginRoutes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="14" column="42" lean-forward="true" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
-          <folding>
-            <element signature="e#6#62#0#PHP" expanded="false" />
-            <marker date="1507424137616" expanded="true" signature="661:807" ph="SELECT c, l App" />
-            <marker date="1507424137616" expanded="true" signature="1214:1360" ph="SELECT c, l App" />
-            <marker date="1507424137616" expanded="true" signature="1803:1949" ph="SELECT c, l App" />
-            <marker date="1507424137616" expanded="true" signature="2427:2573" ph="SELECT c, l App" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Routes/DenunciaRoutes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="115" column="133" lean-forward="false" selection-start-line="115" selection-start-column="133" selection-end-line="115" selection-end-column="133" />
-          <folding>
-            <marker date="1507426282882" expanded="true" signature="4815:4951" ph="SELECT (a.fk... App" />
-            <marker date="1507426282882" expanded="true" signature="5098:5268" ph="SELECT (c.fk... App" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Models/Entity/Body.html" />
     <entry file="file://$PROJECT_DIR$/src/Models/Entity/Cidadao.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -910,10 +918,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Routes/CidadaoRoutes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
+        <state relative-caret-position="192">
           <caret line="42" column="45" lean-forward="true" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
           <folding>
             <element signature="e#6#62#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Routes/DenunciaRoutes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1717">
+          <caret line="115" column="133" lean-forward="false" selection-start-line="115" selection-start-column="133" selection-end-line="115" selection-end-column="133" />
+          <folding>
+            <marker date="1507426282882" expanded="true" signature="4815:4951" ph="SELECT (a.fk... App" />
+            <marker date="1507426282882" expanded="true" signature="5098:5268" ph="SELECT (c.fk... App" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Routes/LoginRoutes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="56" column="76" lean-forward="false" selection-start-line="56" selection-start-column="76" selection-end-line="56" selection-end-column="76" />
+          <folding>
+            <marker date="1508032295797" expanded="true" signature="661:807" ph="SELECT c, l App" />
+            <marker date="1508032295797" expanded="true" signature="1217:1363" ph="SELECT c, l App" />
+            <marker date="1508032295797" expanded="true" signature="1809:1955" ph="SELECT c, l App" />
+            <marker date="1508032295797" expanded="true" signature="2436:2582" ph="SELECT c, l App" />
           </folding>
         </state>
       </provider>

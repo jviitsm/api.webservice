@@ -24,7 +24,7 @@ $app->post('/login', function (Request $request, Response $response) use ($app) 
                     ':senha' => $senhaParametro));
             $cidadaoPorLogin = $query->getResult();
             if($cidadaoPorLogin){
-                $return = $response->withJson($cidadaoPorLogin, 200);
+                $return = $response->withJson($cidadaoPorLogin[0], 200);
             }
             else if (!$cidadaoPorLogin) {
                 $query = $entityManager->createQuery("SELECT c, l FROM App\Models\Entity\Cidadao c JOIN c.fk_login_cidadao l 
@@ -34,7 +34,7 @@ $app->post('/login', function (Request $request, Response $response) use ($app) 
                         ':senha' => $senhaParametro));
                 $cidadaoPorEmail = $query->getResult();
                 if($cidadaoPorEmail){
-                    $return = $response->withJson($cidadaoPorEmail, 200);
+                    $return = $response->withJson($cidadaoPorEmail[0], 200);
                 }
                 else if (!$cidadaoPorEmail) {
                     $query = $entityManager->createQuery("SELECT c, l FROM App\Models\Entity\Empresa c JOIN c.fk_login_empresa l 
@@ -44,7 +44,7 @@ $app->post('/login', function (Request $request, Response $response) use ($app) 
                             ':senha' => $senhaParametro));
                     $empresaPorLogin = $query->getResult();
                     if($empresaPorLogin) {
-                        $return = $response->withJson($empresaPorLogin, 200);
+                        $return = $response->withJson($empresaPorLogin[0], 200);
                     }
                     else if(!$empresaPorLogin){
                         $query = $entityManager->createQuery("SELECT c, l FROM App\Models\Entity\Empresa c JOIN c.fk_login_empresa l 
@@ -54,7 +54,7 @@ $app->post('/login', function (Request $request, Response $response) use ($app) 
                                 ':senha' => $senhaParametro));
                         $empresaPorEmail = $query->getResult();
                         if($empresaPorEmail){
-                            $return = $response->withJson($empresaPorEmail, 200);
+                            $return = $response->withJson($empresaPorEmail[0], 200);
                         }
                         else{
                             throw new Exception("Login ou Senha incorretos", 404);
