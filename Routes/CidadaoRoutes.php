@@ -40,7 +40,7 @@ $app ->post('/cidadao/cadastrar', function(Request $request, Response $response)
             $name .= $newimage->getClientFilename();
             //  $imgs[] = array('url' => '/Photos/' . $name);
             //local server
-            $newimage->moveTo("/home/citycare//imgs/$name");#/home/citycare/Imgs/User/$name
+            $newimage->moveTo("/home/citycare/imgs/$name");#/home/citycare/Imgs/User/$name
             //localdev
             $photoURL = "/home/citycare//imgs/$name";#/home/citycare/Imgs/User/$name
         }
