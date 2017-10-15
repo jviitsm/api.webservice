@@ -43,12 +43,12 @@
         <entry file="file://$PROJECT_DIR$/Routes/LoginRoutes.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
-              <caret line="56" column="76" lean-forward="false" selection-start-line="56" selection-start-column="76" selection-end-line="56" selection-end-column="76" />
+              <caret line="56" column="82" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="70" selection-end-column="3" />
               <folding>
-                <marker date="1508032295797" expanded="true" signature="661:807" ph="SELECT c, l App" />
-                <marker date="1508032295797" expanded="true" signature="1217:1363" ph="SELECT c, l App" />
-                <marker date="1508032295797" expanded="true" signature="1809:1955" ph="SELECT c, l App" />
-                <marker date="1508032295797" expanded="true" signature="2436:2582" ph="SELECT c, l App" />
+                <marker date="1508033059083" expanded="true" signature="661:807" ph="SELECT c, l App" />
+                <marker date="1508033059083" expanded="true" signature="1217:1363" ph="SELECT c, l App" />
+                <marker date="1508033059083" expanded="true" signature="1809:1955" ph="SELECT c, l App" />
+                <marker date="1508033059083" expanded="true" signature="2436:2582" ph="SELECT c, l App" />
               </folding>
             </state>
           </provider>
@@ -248,7 +248,7 @@
       <workItem from="1507676965564" duration="640000" />
       <workItem from="1507679964937" duration="2207000" />
       <workItem from="1507683297652" duration="11101000" />
-      <workItem from="1508031998383" duration="307000" />
+      <workItem from="1508031998383" duration="1069000" />
     </task>
     <task id="LOCAL-00001" summary="Implementação do cadastro de denuncias, foi alterado o tipo de data de denuncia para string(LEMBRAR DE MUDAR NO PHPMYADMIN DO SERVIDOR)">
       <created>1506044073049</created>
@@ -502,11 +502,18 @@
       <option name="project" value="LOCAL" />
       <updated>1508032217187</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Refatoramento no login">
+      <created>1508032306735</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1508032306735</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113214000" />
+    <option name="totallyTimeSpent" value="113976000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -591,10 +598,10 @@
         <state relative-caret-position="850">
           <caret line="51" column="50" lean-forward="false" selection-start-line="51" selection-start-column="50" selection-end-line="52" selection-end-column="53" />
           <folding>
-            <marker date="1508032295797" expanded="true" signature="661:807" ph="SELECT c, l App" />
-            <marker date="1508032295797" expanded="true" signature="1217:1363" ph="SELECT c, l App" />
-            <marker date="1508032295797" expanded="true" signature="1809:1955" ph="SELECT c, l App" />
-            <marker date="1508032295797" expanded="true" signature="2436:2582" ph="SELECT c, l App" />
+            <marker date="1508033059083" expanded="true" signature="661:807" ph="SELECT c, l App" />
+            <marker date="1508033059083" expanded="true" signature="1217:1363" ph="SELECT c, l App" />
+            <marker date="1508033059083" expanded="true" signature="1809:1955" ph="SELECT c, l App" />
+            <marker date="1508033059083" expanded="true" signature="2436:2582" ph="SELECT c, l App" />
           </folding>
         </state>
       </provider>
@@ -669,10 +676,10 @@
         <state relative-caret-position="850">
           <caret line="51" column="50" lean-forward="false" selection-start-line="51" selection-start-column="50" selection-end-line="52" selection-end-column="53" />
           <folding>
-            <marker date="1508032295797" expanded="true" signature="661:807" ph="SELECT c, l App" />
-            <marker date="1508032295797" expanded="true" signature="1217:1363" ph="SELECT c, l App" />
-            <marker date="1508032295797" expanded="true" signature="1809:1955" ph="SELECT c, l App" />
-            <marker date="1508032295797" expanded="true" signature="2436:2582" ph="SELECT c, l App" />
+            <marker date="1508033059083" expanded="true" signature="661:807" ph="SELECT c, l App" />
+            <marker date="1508033059083" expanded="true" signature="1217:1363" ph="SELECT c, l App" />
+            <marker date="1508033059083" expanded="true" signature="1809:1955" ph="SELECT c, l App" />
+            <marker date="1508033059083" expanded="true" signature="2436:2582" ph="SELECT c, l App" />
           </folding>
         </state>
       </provider>
@@ -940,12 +947,12 @@
     <entry file="file://$PROJECT_DIR$/Routes/LoginRoutes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
-          <caret line="56" column="76" lean-forward="false" selection-start-line="56" selection-start-column="76" selection-end-line="56" selection-end-column="76" />
+          <caret line="56" column="82" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="70" selection-end-column="3" />
           <folding>
-            <marker date="1508032295797" expanded="true" signature="661:807" ph="SELECT c, l App" />
-            <marker date="1508032295797" expanded="true" signature="1217:1363" ph="SELECT c, l App" />
-            <marker date="1508032295797" expanded="true" signature="1809:1955" ph="SELECT c, l App" />
-            <marker date="1508032295797" expanded="true" signature="2436:2582" ph="SELECT c, l App" />
+            <marker date="1508033059083" expanded="true" signature="661:807" ph="SELECT c, l App" />
+            <marker date="1508033059083" expanded="true" signature="1217:1363" ph="SELECT c, l App" />
+            <marker date="1508033059083" expanded="true" signature="1809:1955" ph="SELECT c, l App" />
+            <marker date="1508033059083" expanded="true" signature="2436:2582" ph="SELECT c, l App" />
           </folding>
         </state>
       </provider>
