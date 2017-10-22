@@ -83,10 +83,10 @@ $app->post('/verificar/email', function (Request $request, Response $response) u
     $existeEmail = $loginRepository->findBy(array('email' => $email));
 
     if($existeEmail){
-        return $response->withJson([true], 202);
+        return $response->withStatus(202);
     }
     else{
-        return $response->withJson([false],204);
+        return $response->withStatus(204);
     }
 
 });
@@ -100,10 +100,10 @@ $app->post('/verificar/login', function (Request $request, Response $response) u
     $existeLogin  = $loginRepository->findBy(array('login' => $login));
 
     if($existeLogin){
-        return $response->withJson([true], 202);
+        return $response->withStatus(202);
     }
     else{
-        return $response->withJson([false],204);
+        return $response->withStatus(204);
     }
 
 });
