@@ -75,20 +75,36 @@ $app->post('/imagem/user', function (Request $request, Response $response) use (
 $app->post('/verificar/email', function (Request $request, Response $response) use ($app) {
 
     $fk_login_cidadao = $request->getParam('fk_login_cidadao');
-    $email = $fk_login_cidadao[email];
+    $email = $fk_login_cidadao['email'];
     $entityManager = $this -> get('em');
 
-    $existeEmail = $entityManager->createQuery("SELECT l from App\Models\Entity\Login l WHERE l.email = :email");
-    $existeEmail->setParameters(':email', $email);
+
+    $loginRepository = $entityManager->getRepository('App\Models\Entity\Login');
+    $existeEmail = $loginRepository->findBy(array('email' => $email));
 
     if($existeEmail){
-        return $response->withJson(1, 201);
+        return $response->withJson([true], 202);
     }
     else{
-        return $response->withJson(1,404);
+        return $response->withJson([false],204);
     }
 
+});
+$app->post('/verificar/login', function (Request $request, Response $response) use ($app) {
 
+    $fk_login_cidadao = $request->getParam('fk_login_cidadao');
+    $login = $fk_login_cidadao['login'];
+    $entityManager = $this -> get('em');
+
+    $loginRepository = $entityManager->getRepository('App\Models\Entity\Login');
+    $existeLogin  = $loginRepository->findBy(array('login' => $login));
+
+    if($existeLogin){
+        return $response->withJson([true], 202);
+    }
+    else{
+        return $response->withJson([false],204);
+    }
 
 });
 $app->run();

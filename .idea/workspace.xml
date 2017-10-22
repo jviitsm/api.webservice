@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="50cf916c-80ea-4e71-ba71-5d0e77411230" name="Default" comment="Refatoramento no login">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Routes/RecuperarSenhaRoute.php" />
+    <list default="true" id="50cf916c-80ea-4e71-ba71-5d0e77411230" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Routes/CidadaoRoutes.php" afterPath="$PROJECT_DIR$/Routes/CidadaoRoutes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Routes/DenunciaRoutes.php" afterPath="$PROJECT_DIR$/Routes/DenunciaRoutes.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,8 +17,8 @@
       <file leaf-file-name="CidadaoRoutes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Routes/CidadaoRoutes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="40" />
+            <state relative-caret-position="408">
+              <caret line="27" column="24" lean-forward="false" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
               <folding>
                 <element signature="e#8#64#0#PHP" expanded="true" />
               </folding>
@@ -32,13 +29,9 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="447">
-              <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
-              <folding>
-                <marker date="1508642923283" expanded="true" signature="2223:2230" ph="SELECT c, l App" />
-                <marker date="1508642923283" expanded="true" signature="2223:2255" ph="SELECT l fro... App" />
-                <marker date="1508642923283" expanded="true" signature="2223:2285" ph="SELECT l fro... App" />
-              </folding>
+            <state relative-caret-position="328">
+              <caret line="102" column="46" lean-forward="false" selection-start-line="102" selection-start-column="46" selection-end-line="102" selection-end-column="46" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -139,6 +132,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -173,8 +168,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -263,7 +256,8 @@
       <workItem from="1508535007584" duration="257000" />
       <workItem from="1508539915821" duration="325000" />
       <workItem from="1508642334181" duration="633000" />
-      <workItem from="1508643103554" duration="26000" />
+      <workItem from="1508643103554" duration="845000" />
+      <workItem from="1508643991000" duration="10000" />
     </task>
     <task id="LOCAL-00001" summary="Implementação do cadastro de denuncias, foi alterado o tipo de data de denuncia para string(LEMBRAR DE MUDAR NO PHPMYADMIN DO SERVIDOR)">
       <created>1506044073049</created>
@@ -531,11 +525,18 @@
       <option name="project" value="LOCAL" />
       <updated>1508033070902</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Método p ver se email existe adicionado">
+      <created>1508643173987</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1508643173987</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122614000" />
+    <option name="totallyTimeSpent" value="123443000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -567,8 +568,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="remoção de bibliotecas de autenticação" />
-    <MESSAGE value="Adição das bibliotecas adicionadas anteriormente" />
     <MESSAGE value="Atualização da geração do token" />
     <MESSAGE value="Comentario adicionado" />
     <MESSAGE value="Alterar empresa" />
@@ -592,7 +591,9 @@
     <MESSAGE value="Refatoramento na exibição da denuncia" />
     <MESSAGE value="Testar cadastro de imagem junto com cadastro de cidadao" />
     <MESSAGE value="Refatoramento no login" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refatoramento no login" />
+    <MESSAGE value="Método p ver se email existe adicionado" />
+    <MESSAGE value="Método verificar email existente refatorado e verificar login existente adicionado" />
+    <option name="LAST_COMMIT_MESSAGE" value="Método verificar email existente refatorado e verificar login existente adicionado" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -949,16 +950,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Routes/CidadaoRoutes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="40" />
-          <folding>
-            <element signature="e#8#64#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Routes/LoginRoutes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -972,15 +963,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Routes/CidadaoRoutes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="27" column="24" lean-forward="false" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+          <folding>
+            <element signature="e#8#64#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
-          <folding>
-            <marker date="1508642923283" expanded="true" signature="2223:2230" ph="SELECT c, l App" />
-            <marker date="1508642923283" expanded="true" signature="2223:2255" ph="SELECT l fro... App" />
-            <marker date="1508642923283" expanded="true" signature="2223:2285" ph="SELECT l fro... App" />
-          </folding>
+        <state relative-caret-position="328">
+          <caret line="102" column="46" lean-forward="false" selection-start-line="102" selection-start-column="46" selection-end-line="102" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>
