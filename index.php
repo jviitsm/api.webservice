@@ -74,8 +74,8 @@ $app->post('/imagem/user', function (Request $request, Response $response) use (
 
 $app->post('/verificar/email', function (Request $request, Response $response) use ($app) {
 
-    $fk_login_cidadao = $request->getParam('fk_login_cidadao');
-    $email = $fk_login_cidadao['email'];
+
+    $email = $request->getParam('email');
     $entityManager = $this -> get('em');
 
 
@@ -92,8 +92,8 @@ $app->post('/verificar/email', function (Request $request, Response $response) u
 });
 $app->post('/verificar/login', function (Request $request, Response $response) use ($app) {
 
-    $fk_login_cidadao = $request->getParam('fk_login_cidadao');
-    $login = $fk_login_cidadao['login'];
+    $login = $request->getParam('login');
+
     $entityManager = $this -> get('em');
 
     $loginRepository = $entityManager->getRepository('App\Models\Entity\Login');

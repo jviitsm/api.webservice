@@ -3,7 +3,7 @@
 
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
-
+use PHPMailer\PHPMailer\PHPMailer;
 
 $app->post('/email', function (Request $request, Response $response) use ($app) {
 

@@ -24,8 +24,10 @@ $app->post('/denuncia/cadastrar', function (Request $request, Response $response
 
             $denuncia = new Denuncia();
 
+
             $loginRepository = $entityManager->getRepository('App\Models\Entity\Login');
             $loginDenuncia = $loginRepository->find($fk_login_denuncia -> id_login);
+
 
 
             $categoriaRepository = $entityManager->getRepository('App\Models\Entity\Categoria');
@@ -34,7 +36,7 @@ $app->post('/denuncia/cadastrar', function (Request $request, Response $response
 
             //Salvar foto
             $files = $request->getUploadedFiles();
-            $newimage = $files['foto'];
+            $newimage = $files['fotoDenuncia'];
             if ($newimage->getError() === UPLOAD_ERR_OK) {
                 $uploadFileName = $newimage->getClientFilename();
                 $type = $newimage->getClientMediaType();
@@ -42,9 +44,9 @@ $app->post('/denuncia/cadastrar', function (Request $request, Response $response
                 $name .= $newimage->getClientFilename();
                 //  $imgs[] = array('url' => '/Photos/' . $name);
                 //local server
-                $newimage->moveTo("/home/citycare/imgs/$name");#/home/citycare/Imgs/User/$name
+                $newimage->moveTo("/home/citycare//public_html/Imgs/User/$name");#/home/citycare/Imgs/User/$name
                 //localdev
-                $photoURL = "/home/citycare//imgs/$name";#/home/citycare/Imgs/User/$name
+                $photoURL = "http://projetocitycare.com.br/Imgs/User/$name";#/home/citycare/Imgs/User/$name
             }
 
 
@@ -69,7 +71,8 @@ $app->post('/denuncia/cadastrar', function (Request $request, Response $response
         }catch(Exception $ex)
         {
             throw new Exception($ex->getMessage(), $ex->getCode());
-        } return $return;
+        }
+        return $return;
 
     }
 });
