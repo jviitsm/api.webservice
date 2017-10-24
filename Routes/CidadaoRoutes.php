@@ -35,6 +35,7 @@ $app ->post('/cidadao/cadastrar', function(Request $request, Response $response)
         //Salvar foto
         $files = $request->getUploadedFiles();
         $newimage = $files['foto'];
+        if($newimage){
         if ($newimage->getError() === UPLOAD_ERR_OK) {
             $uploadFileName = $newimage->getClientFilename();
             $type = $newimage->getClientMediaType();
@@ -44,8 +45,15 @@ $app ->post('/cidadao/cadastrar', function(Request $request, Response $response)
             //local server
             $newimage->moveTo("/home/citycare/imgs/$name");#/home/citycare/Imgs/User/$name
             //localdev
-            $photoURL = "/home/citycare//imgs/$name";#/home/citycare/Imgs/User/$name
+            $photoURL = "http://projetocitycare.com.br/Imgs/User/$name";#/home/citycare/Imgs/User/$name
+        }}
+        else
+        {
+            $photoURL = "http://projetocitycare.com.br/Imgs/User/default.png";
         }
+
+
+
         //Instância da entidade Cidadao
         $cidadao = new Cidadao();
         //setando valores do objeto cidadao

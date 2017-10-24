@@ -37,6 +37,7 @@ $app->post('/denuncia/cadastrar', function (Request $request, Response $response
             //Salvar foto
             $files = $request->getUploadedFiles();
             $newimage = $files['fotoDenuncia'];
+            if($newimage){
             if ($newimage->getError() === UPLOAD_ERR_OK) {
                 $uploadFileName = $newimage->getClientFilename();
                 $type = $newimage->getClientMediaType();
@@ -44,10 +45,15 @@ $app->post('/denuncia/cadastrar', function (Request $request, Response $response
                 $name .= $newimage->getClientFilename();
                 //  $imgs[] = array('url' => '/Photos/' . $name);
                 //local server
-                $newimage->moveTo("/home/citycare//public_html/Imgs/User/$name");#/home/citycare/Imgs/User/$name
+                $newimage->moveTo("/home/citycare/public_html/Imgs/Denuncia/$name");#/home/citycare/Imgs/User/$name
                 //localdev
-                $photoURL = "http://projetocitycare.com.br/Imgs/User/$name";#/home/citycare/Imgs/User/$name
+                $photoURL = "http://projetocitycare.com.br/Imgs/Denuncia/$name";#/home/citycare/Imgs/User/$name
             }
+            }
+            else {
+                $photoURL = null;
+            }
+
 
 
             //setando os campos da denuncia
