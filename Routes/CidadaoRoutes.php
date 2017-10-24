@@ -47,9 +47,13 @@ $app ->post('/cidadao/cadastrar', function(Request $request, Response $response)
             //localdev
             $photoURL = "http://projetocitycare.com.br/Imgs/User/$name";#/home/citycare/Imgs/User/$name
         }}
-        else
-        {
-            $photoURL = "http://projetocitycare.com.br/Imgs/User/default.png";
+        else {
+            if ($json->sexo = "masculino") {
+                $photoURL = "http://projetocitycare.com.br/Imgs/User/Masculino.jpg";
+            }
+            else if ($json->sexo = "feminino") {
+
+            $photoURL = "http://projetocitycare.com.br/Imgs/User/Feminino.jpg";}
         }
 
 

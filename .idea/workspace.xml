@@ -4,7 +4,6 @@
     <list default="true" id="50cf916c-80ea-4e71-ba71-5d0e77411230" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Routes/CidadaoRoutes.php" afterPath="$PROJECT_DIR$/Routes/CidadaoRoutes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Routes/DenunciaRoutes.php" afterPath="$PROJECT_DIR$/Routes/DenunciaRoutes.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,26 +14,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CidadaoRoutes.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CidadaoRoutes.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Routes/CidadaoRoutes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="549">
-              <caret line="62" column="41" lean-forward="true" selection-start-line="62" selection-start-column="41" selection-end-line="62" selection-end-column="41" />
+            <state relative-caret-position="413">
+              <caret line="53" column="48" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="164" selection-end-column="0" />
               <folding>
                 <element signature="e#8#64#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DenunciaRoutes.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Routes/DenunciaRoutes.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="41" column="63" lean-forward="true" selection-start-line="41" selection-start-column="63" selection-end-line="41" selection-end-column="63" />
-              <folding>
-                <marker date="1508884821019" expanded="true" signature="5666:5802" ph="SELECT (a.fk... App" />
-                <marker date="1508884821019" expanded="true" signature="5949:6119" ph="SELECT (c.fk... App" />
               </folding>
             </state>
           </provider>
@@ -88,8 +74,8 @@
         <option value="$PROJECT_DIR$/Routes/LoginRoutes.php" />
         <option value="$PROJECT_DIR$/Routes/RecuperarSenhaRoute.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/Routes/CidadaoRoutes.php" />
         <option value="$PROJECT_DIR$/Routes/DenunciaRoutes.php" />
+        <option value="$PROJECT_DIR$/Routes/CidadaoRoutes.php" />
       </list>
     </option>
   </component>
@@ -253,7 +239,7 @@
       <workItem from="1508699887332" duration="1255000" />
       <workItem from="1508722602621" duration="336000" />
       <workItem from="1508812810007" duration="15000" />
-      <workItem from="1508883604007" duration="1554000" />
+      <workItem from="1508883604007" duration="2167000" />
     </task>
     <task id="LOCAL-00001" summary="Implementação do cadastro de denuncias, foi alterado o tipo de data de denuncia para string(LEMBRAR DE MUDAR NO PHPMYADMIN DO SERVIDOR)">
       <created>1506044073049</created>
@@ -542,11 +528,18 @@
       <option name="project" value="LOCAL" />
       <updated>1508722902143</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Envio de foto default de usuario para o servidor, e envio de foto de denuncia null">
+      <created>1508885189969</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1508885189985</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127914000" />
+    <option name="totallyTimeSpent" value="128527000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -578,7 +571,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Alterar empresa" />
     <MESSAGE value="new token" />
     <MESSAGE value="Login refatorado, agora funciona em 1 só método, e verifica se foi por email ou login, funciona para empresa e para cidadao" />
     <MESSAGE value="Login refatorado" />
@@ -603,7 +595,8 @@
     <MESSAGE value="Método verificar email existente refatorado e verificar login existente adicionado" />
     <MESSAGE value="use PHPMailer\PHPMailer\PHPMailer;" />
     <MESSAGE value="Refatoramento validar login e email" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refatoramento validar login e email" />
+    <MESSAGE value="Envio de foto default de usuario para o servidor, e envio de foto de denuncia null" />
+    <option name="LAST_COMMIT_MESSAGE" value="Envio de foto default de usuario para o servidor, e envio de foto de denuncia null" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -970,23 +963,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Routes/CidadaoRoutes.php">
+    <entry file="file://$PROJECT_DIR$/Routes/DenunciaRoutes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="62" column="41" lean-forward="true" selection-start-line="62" selection-start-column="41" selection-end-line="62" selection-end-column="41" />
+        <state relative-caret-position="425">
+          <caret line="53" column="33" lean-forward="true" selection-start-line="53" selection-start-column="33" selection-end-line="53" selection-end-column="33" />
           <folding>
-            <element signature="e#8#64#0#PHP" expanded="true" />
+            <marker date="1508884821019" expanded="true" signature="5666:5802" ph="SELECT (a.fk... App" />
+            <marker date="1508884821019" expanded="true" signature="5949:6119" ph="SELECT (c.fk... App" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Routes/DenunciaRoutes.php">
+    <entry file="file://$PROJECT_DIR$/Routes/CidadaoRoutes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="41" column="63" lean-forward="true" selection-start-line="41" selection-start-column="63" selection-end-line="41" selection-end-column="63" />
+        <state relative-caret-position="413">
+          <caret line="53" column="48" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="164" selection-end-column="0" />
           <folding>
-            <marker date="1508884821019" expanded="true" signature="5666:5802" ph="SELECT (a.fk... App" />
-            <marker date="1508884821019" expanded="true" signature="5949:6119" ph="SELECT (c.fk... App" />
+            <element signature="e#8#64#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
