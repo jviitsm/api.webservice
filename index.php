@@ -76,16 +76,15 @@ $app->post('/verificar/email', function (Request $request, Response $response) u
 
 
     $email = $request->getParam('email');
-    $entityManager = $this -> get('em');
+    $entityManager = $this->get('em');
 
 
     $loginRepository = $entityManager->getRepository('App\Models\Entity\Login');
     $existeEmail = $loginRepository->findBy(array('email' => $email));
 
-    if($existeEmail){
+    if ($existeEmail) {
         return $response->withStatus(202);
-    }
-    else{
+    } else {
         return $response->withStatus(204);
     }
 
@@ -94,16 +93,48 @@ $app->post('/verificar/login', function (Request $request, Response $response) u
 
     $login = $request->getParam('login');
 
-    $entityManager = $this -> get('em');
+    $entityManager = $this->get('em');
 
     $loginRepository = $entityManager->getRepository('App\Models\Entity\Login');
-    $existeLogin  = $loginRepository->findBy(array('login' => $login));
+    $existeLogin = $loginRepository->findBy(array('login' => $login));
 
-    if($existeLogin){
+    if ($existeLogin) {
         return $response->withStatus(202);
-    }
-    else{
+    } else {
         return $response->withStatus(204);
+    }
+
+});
+$app->post('/retorno', function (Request $request, Response $response) use ($app) {
+
+    $id_login = $request->getParam('id_login');
+
+    $entityManager = $this->get('em');
+    $usuarioRepository = $entityManager->getRepository('App\Models\Entity\Cidadao');
+    $usuario = $usuarioRepository->findBy(array("fk_login_cidadao" => $id_login));
+
+    if ($usuario) {
+        $usuarioRetorno[] = array();
+        foreach ($usuario as $usuarios) {
+            $usuarioRetorno = ["cidadão" => array("id_cidadao" => $usuarios->id_cidadao, "nome" => $usuarios->nome,
+                "sobrenome" => $usuarios->sobrenome, "sexo" => $usuarios->sexo, "estado" => $usuarios->estado,
+                "cidade" => $usuarios->cidade, "dir_foto_usuario" => $usuarios->dir_foto_usuario)];
+        }
+        return $response->withJson($usuarioRetorno, 222)->withHeader('Content-type', 'application/json');
+    }
+    $empresaRepository = $entityManager->getRepository('App\Models\Entity\Empresa');
+    $empresa = $empresaRepository->findBy(array("fk_login_empresa" => $id_login));
+
+    if ($empresa) {
+        $empresaRetorno[] = array();
+        foreach ($empresa as $empresas) {
+            $empresaRetorno = ["empresa" => array("id_empresa" => $empresas->id_empresa, "nome_fantasia" => $empresas->nome_fantasia,
+                "cnpj" => $empresas->cnpj, "razao_social" => $empresas->razao_social, "estado" => $empresas->estado,
+                "cidade" => $empresas->cidade, "dir_foto_usuario" => $empresas->dir_foto_usuario)];
+        }
+        return $response->withJson($empresaRetorno, 223)->withHeader('Content-type', 'application/json');
+    } else {
+        return $response->withJson(0, 404)->withHeader('Content-type', 'application/json');
     }
 
 });
