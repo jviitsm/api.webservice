@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50cf916c-80ea-4e71-ba71-5d0e77411230" name="Default" comment="Verificação se o usuário é masculino ou feminino para cadastro de foto default">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Routes/DenunciaRoutes.php" afterPath="$PROJECT_DIR$/Routes/DenunciaRoutes.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bootstrap.php" afterPath="$PROJECT_DIR$/bootstrap.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,7 +35,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DenunciaRoutes.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DenunciaRoutes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Routes/DenunciaRoutes.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="433">
@@ -48,6 +46,16 @@
                 <marker date="1509501801042" expanded="true" signature="5908:6078" ph="SELECT (c.fk... App" />
                 <marker date="1509501801042" expanded="true" signature="7120:7230" ph="SELECT d, c App" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootstrap.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bootstrap.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="402">
+              <caret line="89" column="29" lean-forward="false" selection-start-line="89" selection-start-column="29" selection-end-line="89" selection-end-column="29" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -90,7 +98,6 @@
         <option value="$PROJECT_DIR$/Mail/Mailer.php" />
         <option value="$PROJECT_DIR$/App/Mail/Message.php" />
         <option value="$PROJECT_DIR$/App/Mail/Mailer.php" />
-        <option value="$PROJECT_DIR$/bootstrap.php" />
         <option value="$PROJECT_DIR$/src/Models/Entity/Password.php" />
         <option value="$PROJECT_DIR$/src/Models/Entity/Login.php" />
         <option value="$PROJECT_DIR$/Routes/EmpresaRoutes.php" />
@@ -102,6 +109,7 @@
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/Routes/CidadaoRoutes.php" />
         <option value="$PROJECT_DIR$/Routes/DenunciaRoutes.php" />
+        <option value="$PROJECT_DIR$/bootstrap.php" />
       </list>
     </option>
   </component>
@@ -112,7 +120,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="5" />
     <option name="y" value="2" />
     <option name="width" value="697" />
@@ -270,7 +278,7 @@
       <workItem from="1509053891707" duration="740000" />
       <workItem from="1509062486790" duration="251000" />
       <workItem from="1509244681348" duration="5288000" />
-      <workItem from="1509499531281" duration="2309000" />
+      <workItem from="1509499531281" duration="2459000" />
     </task>
     <task id="LOCAL-00001" summary="Implementação do cadastro de denuncias, foi alterado o tipo de data de denuncia para string(LEMBRAR DE MUDAR NO PHPMYADMIN DO SERVIDOR)">
       <created>1506044073049</created>
@@ -577,10 +585,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="137236000" />
+    <option name="totallyTimeSpent" value="137386000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16325037" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -913,14 +921,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bootstrap.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Routes/RecuperarSenhaRoute.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -1026,6 +1026,14 @@
             <marker date="1509501801042" expanded="true" signature="5908:6078" ph="SELECT (c.fk... App" />
             <marker date="1509501801042" expanded="true" signature="7120:7230" ph="SELECT d, c App" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="89" column="29" lean-forward="false" selection-start-line="89" selection-start-column="29" selection-end-line="89" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>

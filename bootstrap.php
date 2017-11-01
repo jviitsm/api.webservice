@@ -87,7 +87,7 @@ $app->add(new \Slim\Middleware\JwtAuthentication([
     "regexp" => "/(.*)/", //Regex para encontrar o Token nos Headers - Livre
     "header" => "X-Token", //O Header que vai conter o token
     "path" => "/", //Vamos cobrir toda a API a partir do /
-    "passthrough" => ["/auth","/denuncia/er"], //Vamos adicionar a exceção de cobertura a rota /auth
+    "passthrough" => ["/auth"], //Vamos adicionar a exceção de cobertura a rota /auth
     "realm" => "Protected",
     "secret" => $container['secretkey'],
     "secure" => false,
