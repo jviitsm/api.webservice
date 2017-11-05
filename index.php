@@ -122,6 +122,7 @@ $app->post('/retorno', function (Request $request, Response $response) use ($app
         }
         return $response->withJson($usuarioRetorno, 222)->withHeader('Content-type', 'application/json');
     }
+
     $empresaRepository = $entityManager->getRepository('App\Models\Entity\Empresa');
     $empresa = $empresaRepository->findBy(array("fk_login_empresa" => $id_login));
 

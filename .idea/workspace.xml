@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="50cf916c-80ea-4e71-ba71-5d0e77411230" name="Default" comment="Verificação se o usuário é masculino ou feminino para cadastro de foto default">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Routes/AgilizaRoutes.php" afterPath="$PROJECT_DIR$/Routes/AgilizaRoutes.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -13,29 +14,13 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="DenunciaRoutes.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Routes/DenunciaRoutes.php">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="AgilizaRoutes.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Routes/AgilizaRoutes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="76" column="12" lean-forward="false" selection-start-line="76" selection-start-column="12" selection-end-line="76" selection-end-column="114" />
-              <folding>
-                <marker date="1509501801042" expanded="true" signature="5637:5773" ph="SELECT (a.fk... App" />
-                <marker date="1509501801042" expanded="true" signature="5908:6078" ph="SELECT (c.fk... App" />
-                <marker date="1509501801042" expanded="true" signature="7120:7230" ph="SELECT d, c App" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="138" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
-              <folding>
-                <element signature="e#7#63#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="379">
+              <caret line="68" column="61" lean-forward="false" selection-start-line="68" selection-start-column="61" selection-end-line="68" selection-end-column="61" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -81,7 +66,6 @@
         <option value="$PROJECT_DIR$/src/Models/Entity/Password.php" />
         <option value="$PROJECT_DIR$/src/Models/Entity/Login.php" />
         <option value="$PROJECT_DIR$/Routes/EmpresaRoutes.php" />
-        <option value="$PROJECT_DIR$/Routes/AgilizaRoutes.php" />
         <option value="$PROJECT_DIR$/src/Models/Entity/Body.html" />
         <option value="$PROJECT_DIR$/src/Models/Entity/Email.php" />
         <option value="$PROJECT_DIR$/Routes/LoginRoutes.php" />
@@ -90,6 +74,7 @@
         <option value="$PROJECT_DIR$/Routes/DenunciaRoutes.php" />
         <option value="$PROJECT_DIR$/bootstrap.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/Routes/AgilizaRoutes.php" />
       </list>
     </option>
   </component>
@@ -121,7 +106,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -156,6 +140,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -260,7 +245,9 @@
       <workItem from="1509244681348" duration="5288000" />
       <workItem from="1509499531281" duration="2815000" />
       <workItem from="1509572449697" duration="73000" />
-      <workItem from="1509575385301" duration="1486000" />
+      <workItem from="1509575385301" duration="1561000" />
+      <workItem from="1509658175956" duration="19000" />
+      <workItem from="1509900707465" duration="1300000" />
     </task>
     <task id="LOCAL-00001" summary="Implementação do cadastro de denuncias, foi alterado o tipo de data de denuncia para string(LEMBRAR DE MUDAR NO PHPMYADMIN DO SERVIDOR)">
       <created>1506044073049</created>
@@ -567,7 +554,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="139301000" />
+    <option name="totallyTimeSpent" value="140695000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -869,21 +856,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Routes/AgilizaRoutes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Models/Entity/Agiliza.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="16" lean-forward="true" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Models/Entity/Cidadao.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="918">
@@ -996,7 +968,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Routes/DenunciaRoutes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
+        <state relative-caret-position="1207">
           <caret line="76" column="12" lean-forward="false" selection-start-line="76" selection-start-column="12" selection-end-line="76" selection-end-column="114" />
           <folding>
             <marker date="1509501801042" expanded="true" signature="5637:5773" ph="SELECT (a.fk... App" />
@@ -1008,11 +980,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="138" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
+        <state relative-caret-position="277">
+          <caret line="131" column="30" lean-forward="false" selection-start-line="131" selection-start-column="30" selection-end-line="131" selection-end-column="30" />
           <folding>
             <element signature="e#7#63#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Models/Entity/Agiliza.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="16" lean-forward="true" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Routes/AgilizaRoutes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="68" column="61" lean-forward="false" selection-start-line="68" selection-start-column="61" selection-end-line="68" selection-end-column="61" />
+          <folding />
         </state>
       </provider>
     </entry>
