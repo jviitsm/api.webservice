@@ -185,16 +185,36 @@ $app->get('/denuncia/all', function (Request $request, Response $response) use (
 
     $entityManager = $this->get('em');
 
-    $denunciaRepository = $entityManager->createQuery("SELECT d, c FROM App\Models\Entity\Denuncia d JOIN d.fk_categoria_denuncia c WHERE c = d.fk_categoria_denuncia");
-    $denuncia = $denunciaRepository->setMaxResults(20)->getResult();
+    $denunciaRepository = $entityManager->getRepository('App\Models\Entity\Denuncia');
+    $denuncia = $denunciaRepository->findBy(array("status_denuncia" => 1));
 
     $arrayDenuncia = array();
-    $arrayAgiliza = array();
-    $arrayComentario = array();
     $array = array();
     $i =0;
+    $agilizaRepository = $entityManager->getRepository('App\Models\Entity\Agiliza');
+    $comentarioRepository = $entityManager->getRepository('App\Models\Entity\Comentario');
+
+    try{
 
     foreach($denuncia as $index){
+
+        $arrayAgiliza = array();
+        $agiliza = $agilizaRepository->findBy(array('fk_denuncia_agiliza' => $index -> id_denuncia, 'interacao' => 1));
+
+        foreach ($agiliza as $agilizas){
+            $arrayAgiliza[] = ["fk_login_agiliza" => array("id_login" => $agilizas -> fk_login_agiliza -> id_login),
+                "interacao" => $agilizas -> interacao
+            ];
+        }
+
+        $arrayComentario = array();
+        $comentario = $comentarioRepository->findBy(array('fk_denuncia_comentario' => $index -> id_denuncia));
+
+        foreach ($comentario as $comentarios){
+            $arrayComentario[] = ["fk_login_comentario" => array("id_login" => $comentarios -> fk_login_comentario -> id_login),
+                "descricao" => $comentarios -> descricao_comentario
+            ];
+        }
 
         $arrayDenuncia[] = ["id_denuncia" => $index ->id_denuncia,
             "fk_login_denuncia" => array( "id_login" => $index -> fk_login_denuncia -> id_login),
@@ -208,30 +228,15 @@ $app->get('/denuncia/all', function (Request $request, Response $response) use (
             "status_denuncia" => $index -> status_denuncia,
             "fk_categoria_denuncia" => $index -> fk_categoria_denuncia,
             "fk_solucao_denuncia" => $index -> fk_solucao_denuncia,
+            "agilizas" => $arrayAgiliza,
+            "comentarios" => $arrayComentario
+
         ];
 
 
 
 
 
-        $agilizaRepository = $entityManager->getRepository('App\Models\Entity\Agiliza');
-        $comentarioRepository = $entityManager->getRepository('App\Models\Entity\Comentario');
-
-        $agiliza = $agilizaRepository->findBy(array('fk_denuncia_agiliza' => $index -> id_denuncia));
-
-
-        foreach ($agiliza as $agilizas){
-            $arrayAgiliza[] = ["fk_login_agiliza" => array("id_login" => $agilizas -> fk_login_agiliza -> id_login),
-                "interacao" => $agilizas -> interacao
-            ];
-        }
-        $comentario = $comentarioRepository->findBy(array('fk_denuncia_comentario' => $index -> id_denuncia));
-
-        foreach ($comentario as $comentarios){
-            $arrayComentario[] = ["fk_login_comentario" => array("id_login" => $comentarios -> fk_login_comentario -> id_login),
-                "descricao" => $comentarios -> descricao_comentario
-            ];
-        }
 
 
 
@@ -239,11 +244,16 @@ $app->get('/denuncia/all', function (Request $request, Response $response) use (
 
 
 
-        $array[] = ["denuncia" => $arrayDenuncia[$i],"agiliza" => $arrayAgiliza,"comentario" => $arrayComentario];
+        $array[] = ["denuncia" => $arrayDenuncia[$i]];
+
 
         $i++;
 
     }
+    }catch(Exception $ex){
+        throw new Exception($ex->getMessage(), $ex->getCode());
+    }
 
-    return json_encode($array);
+;
+  return $response->withJson([$array],200)->withHeader('Content-type', 'application/json');
 });
