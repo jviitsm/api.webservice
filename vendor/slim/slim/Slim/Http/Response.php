@@ -60,6 +60,8 @@ class Response extends Message implements ResponseInterface
         206 => 'Partial Content',
         207 => 'Multi-Status',
         208 => 'Already Reported',
+        222 => 'Cidadao',
+        223 => 'Empresa',
         226 => 'IM Used',
         //Redirection 3xx
         300 => 'Multiple Choices',

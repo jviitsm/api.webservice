@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="50cf916c-80ea-4e71-ba71-5d0e77411230" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Routes/DenunciaRoutes.php" afterPath="$PROJECT_DIR$/Routes/DenunciaRoutes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Models/Entity/Denuncia.php" afterPath="$PROJECT_DIR$/src/Models/Entity/Denuncia.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/slim/slim/Slim/Http/Response.php" afterPath="$PROJECT_DIR$/vendor/slim/slim/Slim/Http/Response.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,14 +14,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DenunciaRoutes.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Routes/DenunciaRoutes.php">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="210" column="36" lean-forward="false" selection-start-line="210" selection-start-column="22" selection-end-line="210" selection-end-column="36" />
+            <state relative-caret-position="192">
+              <caret line="121" column="105" lean-forward="true" selection-start-line="121" selection-start-column="105" selection-end-line="121" selection-end-column="105" />
               <folding>
-                <marker date="1510195827853" expanded="true" signature="5628:5764" ph="SELECT (a.fk... App" />
-                <marker date="1510195827853" expanded="true" signature="5899:6069" ph="SELECT (c.fk... App" />
+                <element signature="e#7#63#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -47,6 +45,8 @@
       <find>path</find>
       <find>paths</find>
       <find>&lt;</find>
+      <find>catch</find>
+      <find>222</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -77,11 +77,12 @@
         <option value="$PROJECT_DIR$/Routes/EmpresaRoutes.php" />
         <option value="$PROJECT_DIR$/src/Models/Entity/Cidadao.php" />
         <option value="$PROJECT_DIR$/src/Models/Entity/Comentario.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/bootstrap.php" />
         <option value="$PROJECT_DIR$/Routes/RecuperarSenhaRoute.php" />
         <option value="$PROJECT_DIR$/src/Models/Entity/Denuncia.php" />
         <option value="$PROJECT_DIR$/Routes/DenunciaRoutes.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/vendor/slim/slim/Slim/Http/Response.php" />
       </list>
     </option>
   </component>
@@ -128,20 +129,37 @@
             <path>
               <item name="api.webservice" type="b2602c69:ProjectViewProjectNode" />
               <item name="api.webservice" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="api.webservice" type="b2602c69:ProjectViewProjectNode" />
               <item name="api.webservice" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Models" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="slim" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="api.webservice" type="b2602c69:ProjectViewProjectNode" />
               <item name="api.webservice" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Models" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Entity" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="slim" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="slim" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="api.webservice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="api.webservice" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="slim" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="slim" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Slim" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="api.webservice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="api.webservice" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="slim" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="slim" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Slim" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -267,7 +285,7 @@
       <workItem from="1510179999067" duration="3633000" />
       <workItem from="1510186064539" duration="1357000" />
       <workItem from="1510188979186" duration="30000" />
-      <workItem from="1510189210849" duration="6556000" />
+      <workItem from="1510189210849" duration="7115000" />
     </task>
     <task id="LOCAL-00001" summary="Implementação do cadastro de denuncias, foi alterado o tipo de data de denuncia para string(LEMBRAR DE MUDAR NO PHPMYADMIN DO SERVIDOR)">
       <created>1506044073049</created>
@@ -591,11 +609,18 @@
       <option name="project" value="LOCAL" />
       <updated>1510194108656</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Método feedSecundario implementado">
+      <created>1510195889240</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1510195889240</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="164628000" />
+    <option name="totallyTimeSpent" value="165187000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -627,7 +652,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Erro de autenticação" />
     <MESSAGE value="Adicionado erro de autenticação com o código 401" />
     <MESSAGE value="Adicionado regra que obriga o uso de https, menos no localhost" />
     <MESSAGE value="Retirado https" />
@@ -652,7 +676,8 @@
     <MESSAGE value="Verificação se o usuário é masculino ou feminino para cadastro de foto default" />
     <MESSAGE value="Método alterar agiliza criado" />
     <MESSAGE value="método de feed de denuncias alterado" />
-    <option name="LAST_COMMIT_MESSAGE" value="método de feed de denuncias alterado" />
+    <MESSAGE value="Método feedSecundario implementado" />
+    <option name="LAST_COMMIT_MESSAGE" value="Método feedSecundario implementado" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -661,20 +686,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Routes/EmpresaRoutes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1768">
-          <caret line="109" column="33" lean-forward="true" selection-start-line="109" selection-start-column="33" selection-end-line="109" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="16" lean-forward="false" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Routes/ComentarioRoutes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -816,14 +827,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Routes/CidadaoRoutes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="161" column="0" lean-forward="true" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Routes/ComentarioRoutes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="498">
@@ -897,16 +900,6 @@
         <state relative-caret-position="34">
           <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="1" />
-          <folding>
-            <element signature="e#7#63#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1051,6 +1044,40 @@
           <folding>
             <marker date="1510195827853" expanded="true" signature="5628:5764" ph="SELECT (a.fk... App" />
             <marker date="1510195827853" expanded="true" signature="5899:6069" ph="SELECT (c.fk... App" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Routes/CidadaoRoutes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="79" column="5" lean-forward="true" selection-start-line="76" selection-start-column="5" selection-end-line="79" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/slim/slim/Slim/Router.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/slim/slim/Slim/Http/Response.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="62" column="25" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="482" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="121" column="105" lean-forward="true" selection-start-line="121" selection-start-column="105" selection-end-line="121" selection-end-column="105" />
+          <folding>
+            <element signature="e#7#63#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
