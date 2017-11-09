@@ -74,7 +74,7 @@ $app->post('/denuncia/cadastrar', function (Request $request, Response $response
             $entityManager->persist($denuncia);
             $entityManager->flush();
 
-            $return = $response->withJson(["result" => true],201)->withHeader('Content-type', 'application/json');
+            $return = $response->withJson($denuncia,201)->withHeader('Content-type', 'application/json');
 
         }catch(Exception $ex)
         {
@@ -203,7 +203,9 @@ $app->get('/denuncia/all', function (Request $request, Response $response) use (
 
         foreach ($agiliza as $agilizas){
             $arrayAgiliza[] = ["fk_login_agiliza" => array("id_login" => $agilizas -> fk_login_agiliza -> id_login),
-                "interacao" => $agilizas -> interacao
+                "interacao" => $agilizas -> interacao,
+                "fk_denuncia_agiliza" => array( "id_denuncia" => $agilizas -> fk_denuncia_agiliza -> id_denuncia),
+                
             ];
         }
 
@@ -212,7 +214,8 @@ $app->get('/denuncia/all', function (Request $request, Response $response) use (
 
         foreach ($comentario as $comentarios){
             $arrayComentario[] = ["fk_login_comentario" => array("id_login" => $comentarios -> fk_login_comentario -> id_login),
-                "descricao" => $comentarios -> descricao_comentario
+                "descricao" => $comentarios -> descricao_comentario,
+                "fk_denuncia_comentario" => array( "id_denuncia" => $comentarios -> fk_denuncia_comentario -> id_denuncia),
             ];
         }
 
@@ -228,8 +231,6 @@ $app->get('/denuncia/all', function (Request $request, Response $response) use (
             "status_denuncia" => $index -> status_denuncia,
             "fk_categoria_denuncia" => $index -> fk_categoria_denuncia,
             "fk_solucao_denuncia" => $index -> fk_solucao_denuncia,
-            "agilizas" => $arrayAgiliza,
-            "comentarios" => $arrayComentario
 
         ];
 
@@ -244,7 +245,7 @@ $app->get('/denuncia/all', function (Request $request, Response $response) use (
 
 
 
-        $array[] = ["denuncia" => $arrayDenuncia[$i]];
+        $array[] = ["denuncia" => $arrayDenuncia[$i],"agiliza" => $arrayAgiliza, "comentario" => $arrayComentario];
 
 
         $i++;
@@ -254,6 +255,7 @@ $app->get('/denuncia/all', function (Request $request, Response $response) use (
         throw new Exception($ex->getMessage(), $ex->getCode());
     }
 
-;
-  return $response->withJson([$array],200)->withHeader('Content-type', 'application/json');
+
+  return $response->withJson($array,200)->withHeader('Content-type', 'application/json');
 });
+

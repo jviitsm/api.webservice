@@ -1,6 +1,6 @@
 {
     "require": {
-        "slim/slim": "^3.8",
+        "slim/slim": "3.8.1",
         "doctrine/orm": "^2.5",
         "oscarotero/psr7-middlewares": "^3.21",
         "tuupola/slim-basic-auth": "^2.3",

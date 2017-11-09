@@ -34,7 +34,7 @@ $app->post('/comentario/cadastrar', function (Request $request, Response $respon
             $entityManager->persist($comentario);
             $entityManager->flush();
 
-            $return = $response->withJson(["result" => true],201)->withHeader('Content-type', 'application/json');
+            $return = $response->withJson($comentario,201)->withHeader('Content-type', 'application/json');
 
         }catch(Exception $ex)
         {
@@ -52,7 +52,9 @@ $app->post('/comentario/exibir', function (Request $request, Response $response)
         try{
             $id = $request->getParam('id_comentario');
 
-            $comentario = $entityManager->find('App\Models\Entity\Comentario', $id);
+            $comentarioRepository = $entityManager->getRepository('App\Models\Entity\Comentario');
+            $comentario = $comentarioRepository->find($id);
+
 
             if($comentario){
                 $return = $response->withJson($comentario, 200);
@@ -67,5 +69,30 @@ $app->post('/comentario/exibir', function (Request $request, Response $response)
         } return $return;
     }
 
+});
+$app->post('/comentario/deletar', function (Request $request, Response $response) use ($app) {
+    if (!$request->getParsedBody()) {
+        throw new Exception("Corpo de requisição vazio", 204);
+    } else {
+        try {
+            $entityManager = $this->get('em');
+            $id = $request->getParam('id_comentario');
 
+            $comentarioRepository = $entityManager->getRepository('App\Models\Entity\Comentario');
+            $comentario = $comentarioRepository->find($id);
+
+
+            $entityManager->remove($comentario);
+            $entityManager->flush();
+
+            $return = $response->withJson(1, 200);
+
+
+
+        } catch (Exception $ex) {
+            throw new Exception($ex->getMessage(), $ex->getCode());
+        }
+        return $return;
+
+    }
 });

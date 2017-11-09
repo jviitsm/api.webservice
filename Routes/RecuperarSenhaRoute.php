@@ -1,4 +1,4 @@
-<<?php
+<?php
 
 
 use \Psr\Http\Message\ServerRequestInterface as Request;
@@ -121,4 +121,3 @@ $app->post('/email', function (Request $request, Response $response) use ($app) 
     }
     return $return;
 });
-

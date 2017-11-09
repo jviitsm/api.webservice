@@ -28,7 +28,7 @@ $app->post('/login', function (Request $request, Response $response) use ($app) 
             }
             else if (!$cidadaoPorLogin) {
                 $query = $entityManager->createQuery("SELECT c, l FROM App\Models\Entity\Cidadao c JOIN c.fk_login_cidadao l 
-            WHERE l = l.id_login AND l.email = :email AND l.senha = :senha");
+           <{\"id_comentario\":3 WHERE l = l.id_login AND l.email = :email AND l.senha = :senha");
                 $query->setParameters(
                     array(':email' => $loginParametro,
                         ':senha' => $senhaParametro));

@@ -29,10 +29,13 @@ $container['errorHandler'] = function ($c){
 };
 
 $isDevMode = true;
-
+$cacheDir = dirname(__FILE__).'/cache';
+if (!is_dir($cacheDir)) {
+    mkdir($cacheDir);
+}
 
 //Diretório das Entidades e Metadata do Doctrine
-$config = Setup::createAnnotationMetadataConfiguration(array(__DIR__."/src/Models/Entity"), $isDevMode);
+$config = Setup::createAnnotationMetadataConfiguration(array(__DIR__."/src/Models/Entity"), $isDevMode,$cacheDir);
 
 $conn = array(
 	'driver' => 'pdo_mysql',
@@ -107,5 +110,4 @@ $trustedProxies = ['10.0.0.1', '10.0.0.2'];
 $app->add(new RKA\Middleware\IpAddress($checkProxyHeaders, $trustedProxies));
 
 
-
- ?>
+?>

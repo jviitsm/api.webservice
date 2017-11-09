@@ -42,10 +42,9 @@ $app->get('/auth', function (Request $request, Response $response) use ($app) {
 
     $jwt = JWT::encode($token, $key);
 
+
     return $response->withJson(["token" => $jwt], 200)
         ->withHeader('Content-type', 'application/json');
-
-
 });
 
 $app->post('/imagem/user', function (Request $request, Response $response) use ($app) {
