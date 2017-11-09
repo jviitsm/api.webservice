@@ -180,13 +180,124 @@ $app->get('/denuncia/er', function (Request $request, Response $response) use ($
     return $return;
 
 });
+$app->post('/denuncia/excluir', function (Request $request, Response $response) use ($app) {
+    $id = $request->getParam('id_denuncia');
+    $entityManager = $this->get('em');
+    $denunciaRepository = $entityManager->getRepository('App\Models\Entity\Denuncia');
 
+    try{
+    $denuncia = $denunciaRepository->find($id);
+
+
+    $denuncia->setStatus_denuncia(2);
+
+
+
+    $entityManager->merge($denuncia);
+    $entityManager->flush();
+
+
+    $return = $response->withJson(1,200)->withHeader('Content-type', 'application/json');
+    }catch(Exception $ex)
+    {
+        throw new Exception($ex->getMessage(), $ex->getCode());
+    }
+
+    return $return;
+
+
+});
+
+$app->post('/denuncia/feedSecundario', function (Request $request, Response $response) use ($app) {
+    $id = $request->getParam('id_denuncia');
+
+    $entityManager = $this->get('em');
+
+    $denunciaRepository = $entityManager->getRepository('App\Models\Entity\Denuncia');
+    $denuncia = $denunciaRepository->findBy(array("status_denuncia" =>  array(0,1)));
+
+    $arrayDenuncia = array();
+    $array = array();
+    $i =0;
+    $agilizaRepository = $entityManager->getRepository('App\Models\Entity\Agiliza');
+    $comentarioRepository = $entityManager->getRepository('App\Models\Entity\Comentario');
+
+
+    try{
+
+        foreach($denuncia as $index){
+
+            if($index-> id_denuncia >= $id){
+                continue;
+            }
+            $arrayAgiliza = array();
+            $agiliza = $agilizaRepository->findBy(array('fk_denuncia_agiliza' => $index -> id_denuncia, 'interacao' => 1));
+
+            foreach ($agiliza as $agilizas){
+                $arrayAgiliza[] = ["fk_login_agiliza" => array("id_login" => $agilizas -> fk_login_agiliza -> id_login),
+                    "interacao" => $agilizas -> interacao,
+                    "fk_denuncia_agiliza" => array( "id_denuncia" => $agilizas -> fk_denuncia_agiliza -> id_denuncia),
+
+                ];
+            }
+
+            $arrayComentario = array();
+            $comentario = $comentarioRepository->findBy(array('fk_denuncia_comentario' => $index -> id_denuncia));
+
+            foreach ($comentario as $comentarios){
+                $arrayComentario[] = ["fk_login_comentario" => array("id_login" => $comentarios -> fk_login_comentario -> id_login),
+                    "descricao" => $comentarios -> descricao_comentario,
+                    "fk_denuncia_comentario" => array( "id_denuncia" => $comentarios -> fk_denuncia_comentario -> id_denuncia),
+                ];
+            }
+
+            $arrayDenuncia[] = ["id_denuncia" => $index ->id_denuncia,
+                "fk_login_denuncia" => array( "id_login" => $index -> fk_login_denuncia -> id_login),
+                "descricao_denuncia" => $index -> descricao_denuncia,
+                "dir_foto_denuncia" => $index -> dir_foto_denuncia,
+                "latitude_denuncia" => $index -> latitude_denuncia,
+                "longitude_denuncia" => $index -> longitude_denuncia,
+                "cidade" => $index -> cidade,
+                "estado" => $index -> estado,
+                "data_denuncia" => $index -> data_denuncia,
+                "status_denuncia" => $index -> status_denuncia,
+                "fk_categoria_denuncia" => $index -> fk_categoria_denuncia,
+                "fk_solucao_denuncia" => $index -> fk_solucao_denuncia,
+
+            ];
+
+
+
+
+
+
+
+
+
+
+
+
+            $array[] = ["denuncia" => $arrayDenuncia[$i],"agiliza" => $arrayAgiliza, "comentario" => $arrayComentario];
+
+
+            $i++;
+
+        }
+    }catch(Exception $ex){
+        throw new Exception($ex->getMessage(), $ex->getCode());
+    }
+
+
+    return $response->withJson($array,200)->withHeader('Content-type', 'application/json');
+
+
+});
 $app->get('/denuncia/all', function (Request $request, Response $response) use ($app) {
 
     $entityManager = $this->get('em');
 
     $denunciaRepository = $entityManager->getRepository('App\Models\Entity\Denuncia');
-    $denuncia = $denunciaRepository->findBy(array("status_denuncia" => 1));
+    $denuncia = $denunciaRepository->findBy(array("status_denuncia" =>  array(0,1)));
 
     $arrayDenuncia = array();
     $array = array();
