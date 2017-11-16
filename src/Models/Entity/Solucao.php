@@ -27,10 +27,14 @@ class Solucao{
     public $dir_foto_solucao;
     /** 
      * @var string
-     * @Column(type="datetime")
+     * @Column(type="string")
      */ 
     public $data_solucao;
-
+    /**
+     * @OneToOne(targetEntity="Login", fetch="EAGER")
+     * @JoinColumn(name="fk_login_solucao", referencedColumnName="id_login")
+     */
+    public $fk_login_solucao;
     /**
      * @return int
      */

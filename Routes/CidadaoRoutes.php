@@ -194,4 +194,42 @@ $app->put('/cidadao/desativar', function (Request $request, Response $response) 
 });
 
 
+$app->post('/verificar/email', function (Request $request, Response $response) use ($app) {
+
+
+    $email = $request->getParam('email');
+    $entityManager = $this -> get('em');
+
+
+    $loginRepository = $entityManager->getRepository('App\Models\Entity\Login');
+    $existeEmail = $loginRepository->findBy(array('email' => $email));
+
+    if($existeEmail){
+        return $response->withStatus(202);
+    }
+    else{
+        return $response->withStatus(204);
+    }
+
+});
+
+$app->post('/verificar/login', function (Request $request, Response $response) use ($app) {
+
+    $login = $request->getParam('login');
+
+    $entityManager = $this -> get('em');
+
+    $loginRepository = $entityManager->getRepository('App\Models\Entity\Login');
+    $existeLogin  = $loginRepository->findBy(array('login' => $login));
+
+    if($existeLogin){
+        return $response->withStatus(202);
+    }
+    else{
+        return $response->withStatus(204);
+    }
+
+});
+
+
 
