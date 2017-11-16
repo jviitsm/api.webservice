@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50cf916c-80ea-4e71-ba71-5d0e77411230" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Models/Entity/Solicitado.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Routes/CidadaoRoutes.php" afterPath="$PROJECT_DIR$/Routes/CidadaoRoutes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bootstrap.php" afterPath="$PROJECT_DIR$/bootstrap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Models/Entity/Agiliza.php" afterPath="$PROJECT_DIR$/src/Models/Entity/Agiliza.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Models/Entity/Categoria.php" afterPath="$PROJECT_DIR$/src/Models/Entity/Categoria.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Models/Entity/Cidadao.php" afterPath="$PROJECT_DIR$/src/Models/Entity/Cidadao.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Models/Entity/Comentario.php" afterPath="$PROJECT_DIR$/src/Models/Entity/Comentario.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Models/Entity/Login.php" afterPath="$PROJECT_DIR$/src/Models/Entity/Login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Models/Entity/Solucao.php" afterPath="$PROJECT_DIR$/src/Models/Entity/Solucao.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -153,6 +144,11 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="João Victor &lt;jvictorgmodesto@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -866,11 +862,18 @@
       <option name="project" value="LOCAL" />
       <updated>1510201348828</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Model atualizado">
+      <created>1510873875096</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1510873875096</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="171661000" />
+    <option name="totallyTimeSpent" value="171714000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -931,7 +934,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Retirado https" />
     <MESSAGE value="Login funcionando" />
     <MESSAGE value="Retirado tempo de expiração do token" />
     <MESSAGE value="Adicionado get e set de cidade e estado em denuncia" />
@@ -956,7 +958,8 @@
     <MESSAGE value="Método feedSecundario implementado" />
     <MESSAGE value="Adicionado os codes 222 e 223 para cidadao e empresa respectivamente" />
     <MESSAGE value="Alterado o método alterar do cidadao e denuncia" />
-    <option name="LAST_COMMIT_MESSAGE" value="Alterado o método alterar do cidadao e denuncia" />
+    <MESSAGE value="Model atualizado" />
+    <option name="LAST_COMMIT_MESSAGE" value="Model atualizado" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
